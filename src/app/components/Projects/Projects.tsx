@@ -1,11 +1,11 @@
 "use client";
 
-const UND: React.FC = () => {
+const MyProjects: React.FC = () => {
   return (
-    <div className="h-[20vh] w-full max-w-5xl rounded-lg bg-stone-900 shadow-lg hover:border-2 hover:border-solid hover:border-[#036ffc] lg:col-span-4 lg:row-start-4 lg:h-[auto]">
-      <a className="">asda</a>
+    <div className="h-[20vh] w-full max-w-6xl rounded-lg border-2 border-solid border-stone-800 bg-black/30 shadow-lg hover:border-[#036ffc] lg:col-span-4 lg:row-start-4 lg:h-[200vh]">
+      <a className="">TODO ADD PAGES FOR PROJECTS HERE</a>
     </div>
   );
 };
 
-export default UND;
+export default MyProjects;
