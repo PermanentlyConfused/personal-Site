@@ -48,16 +48,7 @@ const CustomCursor = () => {
     <>
       <div
         ref={cursorRef}
-        className={`pointer-events-none absolute h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-white opacity-80 transition-all duration-100 ease-out`}
-      ></div>
-
-      <div
-        className="pointer-events-none absolute h-16 w-16 -translate-x-1/2 -translate-y-1/2 transform rounded-full border-2 border-white opacity-40 transition-all duration-100 ease-out"
-        style={{
-          left: `${cursorPosition.x}px`,
-          top: `${cursorPosition.y}px`,
-          opacity: isHovered ? 0.6 : 0,
-        }}
+        className={`to-[transparent_100%)] pointer-events-none fixed z-[50] hidden h-2 w-2 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-radial from-black opacity-30 select-none lg:block`}
       ></div>
     </>
   );

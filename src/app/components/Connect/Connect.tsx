@@ -47,7 +47,7 @@ const Connect: React.FC = () => {
         delay: 1,
         ease: [0, 0.71, 0.2, 1.01],
       }}
-      className="group items-left flex h-[full] max-h-full w-full max-w-5xl flex-col rounded-lg border-2 border-stone-800 bg-black/30 p-2 shadow-lg transition-all duration-500 hover:border-[#036ffc] lg:col-span-2 lg:row-span-1 lg:row-start-3 lg:h-[300] lg:p-10"
+      className="group items-left flex h-[full] max-h-full w-full max-w-5xl flex-col rounded-lg border-2 border-stone-800 bg-black/70 p-2 shadow-lg transition-all duration-500 hover:border-[#036ffc] lg:col-span-2 lg:row-span-1 lg:row-start-3 lg:h-[300] lg:p-10"
     >
       {" "}
       <div className="flex h-full w-full flex-col gap-1 font-[family-name:var(--font-montserrat)]">
@@ -83,7 +83,7 @@ const Connect: React.FC = () => {
         </a>
       </div>
       {/* Content for Connect */}
-      <div className="text-md relative right-[25.5%] bottom-[10%] z-[-1] flex hidden h-[30px] w-[140px] rotate-270 items-center justify-center rounded-t-lg border-t-2 border-r-2 border-l-2 border-[#036ffc] bg-[#036ffc] bg-black/30 px-5 text-white opacity-0 duration-600 ease-in-out select-none lg:block lg:transition-all lg:group-hover:bottom-[60%] lg:group-hover:opacity-100">
+      <div className="text-md relative right-[25.5%] bottom-[10%] z-[-1] flex hidden h-[30px] w-[140px] rotate-270 items-center justify-center rounded-t-lg border-t-2 border-r-2 border-l-2 border-[#036ffc] bg-[#036ffc] bg-black/70 px-5 text-white opacity-0 duration-600 ease-in-out select-none lg:block lg:transition-all lg:group-hover:bottom-[60%] lg:group-hover:opacity-100">
         <p className="m-auto self-center font-semibold">Contact Me</p>
       </div>
     </motion.div>

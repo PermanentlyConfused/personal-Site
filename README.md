@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ### Notes:
 
-- Color Scheme: Black, Blue(#036ffc),Stone-900
+- Color Scheme: [link](https://www.color-hex.com/color-palette/104061)

@@ -1,0 +1,5 @@
+Front end stuff
+
+https://heropatterns.com/       | Patterns here look really nice, also exportable as css code or SVGs
+https://codepen.io/oliviale/pen/dyydRqJ     | Interesting elements
+https://scroll-driven-animations.style/   | Cool scroll based animations
