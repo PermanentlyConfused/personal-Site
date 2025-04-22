@@ -21,11 +21,11 @@ const LeftPanel: React.FC = () => {
       >
         <div className="box-1 rotate-0 rounded-md border-1 border-solid border-black lg:rotate-2">
           <motion.i
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
             transition={{
               duration: 0.25,
-              delay: 1,
+              delay: 0.4,
             }}
             className="pin"
           ></motion.i>
