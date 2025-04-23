@@ -5,15 +5,15 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 const Current: React.FC = () => {
   return (
     <motion.div
-      initial={{ x: -500, rotate: -180 }}
-      whileInView={{ x: 0, rotate: 0 }}
+      initial={{ y: 200, rotate: -180 }}
+      whileInView={{ y: 0, rotate: 0 }}
       viewport={{ once: true }}
       transition={{
-        duration: 2,
+        duration: 1.5,
         delay: 0,
         ease: [0, 0.2, 0.2, 1.01],
       }}
-      className="relative hidden h-48 w-96 -rotate-7 rounded-3xl bg-gray-800 p-4 lg:flex lg:flex-col lg:items-center lg:justify-between"
+      className="relative mt-6 hidden h-48 w-96 -rotate-7 rounded-3xl bg-gray-800 p-4 lg:flex lg:flex-col lg:items-center lg:justify-between"
     >
       <div className="h-full w-full rounded-xl bg-black">
         <div className="flex h-full w-full flex-col rounded-lg bg-black p-5">

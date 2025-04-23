@@ -4,7 +4,7 @@ import { FaGithub, FaInstagram } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import Snortlax from "@/assets/Snortlax.png";
 import Current from "./Current/Current";
-import "@/app/CustomCSS/LeftPanelStyle.css";
+import "@/app/CustomCSS/PinNTape.css";
 
 const LeftPanel: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const LeftPanel: React.FC = () => {
           delay: 0,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[100%] lg:flex-col lg:justify-between lg:pt-10"
+        className="flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[100%] lg:flex-col lg:justify-between"
       >
         <div className="box-1 rotate-0 rounded-md border-1 border-solid border-black lg:rotate-2">
           <motion.i
@@ -27,7 +27,7 @@ const LeftPanel: React.FC = () => {
               duration: 0.25,
               delay: 0.4,
             }}
-            className="pin"
+            className="pin hidden lg:block"
           ></motion.i>
           <h1 className="text-4xl text-slate-900 sm:text-5xl">Art Nguyen</h1>
           <h1 className="mt-3 text-lg tracking-tight text-slate-900 sm:text-xl">
