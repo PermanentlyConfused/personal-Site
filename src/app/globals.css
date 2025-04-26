@@ -20,6 +20,8 @@ body {
   height: auto;
   background-color: #e8e1db;
   color: var(--foreground);
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* body {
@@ -29,8 +31,6 @@ body {
 /* background-size: cover;
   background-position: center;
   background-repeat: no-repeat; */
-
-/* overflow-x: hidden; */
 
 *::-webkit-scrollbar {
   width: 10px;

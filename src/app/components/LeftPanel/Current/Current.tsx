@@ -9,7 +9,7 @@ const Current: React.FC = () => {
       whileInView={{ y: 0, rotate: 0 }}
       viewport={{ once: true }}
       transition={{
-        duration: 1.5,
+        duration: 2.5,
         delay: 0,
         ease: [0, 0.2, 0.2, 1.01],
       }}

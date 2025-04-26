@@ -1,19 +1,31 @@
 import "@/app/CustomCSS/NavStyle.css";
+import { scrollToSection } from "@/app/Helper/Helper";
+
+import Image from "next/image";
+import Dog from "@/assets/dog.png";
+
 const NavBar: React.FC = () => {
   return (
-    <div className="mt-10 grid grid-cols-2 grid-rows-3 gap-x-10 gap-y-15 lg:mt-0">
+    <div className="mt-10 grid grid-cols-2 grid-rows-3 gap-x-10 gap-y-5 lg:my-15">
       <a
-        href="#"
-        className="flex aspect-square rotate-2 items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
+        onClick={() => scrollToSection("topLeft")}
+        className="flex aspect-square rotate-2 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
+        <Image
+          src={Dog.src}
+          alt="asdasdasd"
+          width={120}
+          height={120}
+          className="absolute -top-[80px] left-0"
+        ></Image>
         <div className="text-lg text-black md:text-2xl lg:text-xl">
           About Me
         </div>
       </a>
 
       <a
-        href="#"
-        className="flex aspect-square -rotate-2 items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
+        onClick={() => scrollToSection("topRight")}
+        className="flex aspect-square -rotate-2 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         <div className="text-lg text-black md:text-2xl lg:text-xl">
           Bookmarks
@@ -21,8 +33,8 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        href="#"
-        className="flex aspect-square -rotate-3 items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
+        onClick={() => scrollToSection("midLeft")}
+        className="flex aspect-square -rotate-3 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         {/* <div className="flex aspect-square h-[60%] items-center text-center justify-center bg-blue-800"> */}
         <div className="text-lg text-black md:text-2xl lg:text-xl">Resumé</div>
@@ -30,8 +42,8 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        href="#"
-        className="flex aspect-square rotate-1 items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
+        onClick={() => scrollToSection("midRight")}
+        className="flex aspect-square rotate-1 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         <div className="text-lg text-black md:text-2xl lg:text-xl">
           Projects
@@ -39,8 +51,8 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        href="#"
-        className="flex aspect-square -rotate-6 items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
+        onClick={() => scrollToSection("botLeft")}
+        className="flex aspect-square -rotate-6 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         <div className="text-lg text-black md:text-2xl lg:text-xl">
           Shower Thoughts
@@ -48,8 +60,8 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        href="#"
-        className="flex aspect-square -rotate-4 items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
+        onClick={() => scrollToSection("botRight")}
+        className="flex aspect-square -rotate-4 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         <div className="text-lg text-black md:text-2xl lg:text-xl">
           Guest Book~
