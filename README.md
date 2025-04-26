@@ -38,14 +38,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ### Notes:
 
 - Color Scheme: [link](https://www.color-hex.com/color-palette/104061)
-
-      {/* <main className="lg:p-b-10 mx-auto min-h-screen max-w-screen-xl px-6 py-5 font-sans md:px-12 md:py-10">
-        <div className="flex-col font-[family-name:var(--font-montserrat)] lg:flex lg:flex-row lg:justify-around">
-          <LeftPanel />
-
-          <div className="lg:flex lg:max-h-screen lg:w-[45%] lg:flex-col lg:justify-between lg:py-5">
-            <NavBar />
-          </div>
-        </div>
-      </main>
-      <Footer /> */}
