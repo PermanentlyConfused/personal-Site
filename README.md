@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ### Notes:
 
 - Color Scheme: [link](https://www.color-hex.com/color-palette/104061)
+<<<<<<< HEAD
 
        {/* Expanded Box */}
         <AnimatePresence>
@@ -82,3 +83,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
             </motion.div>
           )}
         </AnimatePresence>
+=======
+>>>>>>> 72eeb80bf92601f8181ed9bbd7b0473ab117570f
