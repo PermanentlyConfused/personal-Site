@@ -3,6 +3,7 @@
 .img-tape {
   position: relative;
   margin-top: 10%;
+  pointer-events: none;
   &:before,
   &:after {
     background: rgba(255, 255, 235, 0.3);
@@ -22,6 +23,29 @@
     height: auto;
     padding: 8px;
     vertical-align: top;
+  }
+}
+
+/* This is just for the bookmarks */
+.img-tape--1 {
+  &:before {
+    width: 220px;
+    height: 40px;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+.img-tape--1--alt {
+  &:before {
+    width: 220px;
+    height: 70px;
+  }
+
+  &:after {
+    display: none;
   }
 }
 

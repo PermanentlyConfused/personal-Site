@@ -1,11 +1,11 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
-import MyProjects from "./components/Projects/MyProjects";
-import MyBookMarks from "./components/Bookmarks/Bookmarks";
-import LeftPanel from "./components/LeftPanel/LeftPanel";
-import NavBar from "./components/NavBar/NavBar";
-import { scrollToSection } from "./Helper/Helper";
+import MyProjects from "@/app/components/Projects/MyProjects";
+import MyBookMarks from "@/app/components/Bookmarks/Bookmarks";
+import LeftPanel from "@/app/components/LeftPanel/LeftPanel";
+import NavBar from "@/app/components/NavBar/NavBar";
+import { scrollToSection } from "@/app/Helper/Helper";
 
 export default function Home() {
   // useEffect(() => {
@@ -43,6 +43,7 @@ export default function Home() {
   //     window.removeEventListener("wheel", handleWheel);
   //   };
   // }, []);
+
   //Focuses on specified div on start
   useEffect(() => {
     const target = document.getElementById("home"); //home,topRight
@@ -54,17 +55,16 @@ export default function Home() {
       });
     }
   }, []);
+  console.log("PAGE RENDERED");
   return (
     <div
       className="grid grid-cols-3 grid-rows-3"
       style={{
-        width: "3080px",
-        height: "4840px",
         gridTemplateColumns: "1920px 1920px 1920px",
         gridTemplateRows: "1080px 1080px 1080px",
       }}
     >
-      <div id="topLeft" className="homeBG h-[1080px] max-w-[1920px] text-black">
+      <div id="topLeft" className="homeBG text-black">
         <button
           onClick={() => scrollToSection("home")}
           className="relative top-[10%] left-[50%] m-4 bg-blue-500 p-2 text-white"
@@ -72,33 +72,24 @@ export default function Home() {
           Go to Home
         </button>
       </div>
-      <div
-        id="home"
-        className="homeBG min-h-[1080px] w-[1920px] px-6 py-5 font-sans md:px-12 md:py-25"
-      >
+
+      <div id="home" className="homeBG font-sans md:px-12 md:py-25">
         <div className="mx-[23%] flex-col font-[family-name:var(--font-montserrat)] lg:flex lg:flex-row lg:justify-between">
           <LeftPanel />
-
-          <div className="[1080px]g:flex-col lg:92[45%] lg:flex lg:max-h-[1080px] lg:justify-between lg:py-5">
+          <div className="lg:92[45%] lg:flex lg:max-h-[1080px] lg:flex-col lg:justify-between lg:py-5">
             <NavBar />
           </div>
         </div>
       </div>
 
-      <div
-        id="topRight"
-        className="homeBG h-[1080px] max-w-[1920px] text-black"
-      >
-        <button
-          onClick={() => scrollToSection("home")}
-          className="relative top-[10%] left-[50%] m-4 bg-blue-500 p-2 text-white"
-        >
-          Go to Home
-        </button>
+      <div id="topRight" className="homeBG flex flex-col text-black">
+        <p className="relative top-10 left-20 mt-20 h-auto w-50 bg-linear-to-r from-amber-500/20 to-amber-500/80 py-2 text-center text-3xl font-semibold text-black drop-shadow-xl">
+          Bookmarks
+        </p>
         <MyBookMarks />
       </div>
 
-      <div id="midLeft" className="homeBG h-[1080px] max-w-[1920px] text-black">
+      <div id="midLeft" className="homeBG text-black">
         <button
           onClick={() => scrollToSection("home")}
           className="relative top-[10%] left-[50%] m-4 bg-blue-500 p-2 text-white"
@@ -106,16 +97,25 @@ export default function Home() {
           Go to Home
         </button>
       </div>
+
       <div
         id="midCenter"
-        className="homeBG flex h-[1080px] max-w-[1920px] flex-col items-center justify-center text-black"
+        className="homeBG flex flex-col items-center justify-center text-black"
       >
         <MyProjects />
       </div>
-      <div
-        id="midRight"
-        className="homeBG h-[1080px] max-w-[1920px] text-black"
-      >
+
+      <div id="midRight" className="homeBG text-black"></div>
+
+      <div id="botLeft" className="homeBG text-black">
+        <button
+          onClick={() => scrollToSection("home")}
+          className="relative top-[10%] left-[50%] m-4 bg-blue-500 p-2 text-white"
+        >
+          Go to Home
+        </button>
+      </div>
+      <div id="botCenter" className="homeBG text-black">
         <button
           onClick={() => scrollToSection("home")}
           className="relative top-[10%] left-[50%] m-4 bg-blue-500 p-2 text-white"
@@ -124,30 +124,7 @@ export default function Home() {
         </button>
       </div>
 
-      <div id="botLeft" className="homeBG h-[1080px] max-w-[1920px] text-black">
-        <button
-          onClick={() => scrollToSection("home")}
-          className="relative top-[10%] left-[50%] m-4 bg-blue-500 p-2 text-white"
-        >
-          Go to Home
-        </button>
-      </div>
-      <div
-        id="botCenter"
-        className="homeBG h-[1080px] max-w-[1920px] text-black"
-      >
-        <button
-          onClick={() => scrollToSection("home")}
-          className="relative top-[10%] left-[50%] m-4 bg-blue-500 p-2 text-white"
-        >
-          Go to Home
-        </button>
-      </div>
-
-      <div
-        id="botRight"
-        className="homeBG h-[1080px] max-w-[1920px] text-black"
-      >
+      <div id="botRight" className="homeBG text-black">
         <button
           onClick={() => scrollToSection("home")}
           className="relative top-[10%] left-[50%] m-4 bg-blue-500 p-2 text-white"

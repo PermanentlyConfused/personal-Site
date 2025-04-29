@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Fartsite",
+  title: "Fart-Site",
   description: "please change thsi later lmao",
 };
 

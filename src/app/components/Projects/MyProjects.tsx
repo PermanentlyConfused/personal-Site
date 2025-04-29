@@ -8,7 +8,7 @@ const MyProjects: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
   const [showBoxes, setShowBoxes] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
-
+  console.log("asd");
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBoxes(true);
@@ -18,10 +18,10 @@ const MyProjects: React.FC = () => {
   }, []);
   return (
     <div>
-      <div className="-left-200 my-auto h-auto w-40 bg-[#e5decf]/80 p-5 text-center text-3xl font-semibold text-black drop-shadow-xl">
+      <div className="-left-200 h-auto w-50 bg-linear-to-r from-lime-300/10 to-lime-300/80 p-5 py-3 text-center text-3xl font-semibold text-black drop-shadow-xl">
         <p>Projects</p>
       </div>
-      <div className="group duration:500 relative mt-6 h-[720px] w-[1280px] rotate-1 rounded-3xl border-2 border-slate-500 bg-slate-300 py-3 pr-16 pl-9 drop-shadow-xl transition hover:rotate-0 lg:flex lg:flex-col lg:items-center lg:justify-between">
+      <div className="group duration:500 relative mt-6 h-[720px] w-[1080px] rotate-1 rounded-3xl border-2 border-slate-500 bg-slate-300 py-3 pr-16 pl-9 drop-shadow-xl transition hover:rotate-0 lg:flex lg:flex-col lg:items-center lg:justify-between">
         {/* make these borders glow white when active */}
 
         <motion.div
@@ -72,7 +72,7 @@ const MyProjects: React.FC = () => {
           }}
           whileInView={{
             borderColor: "#ffffff",
-            backgroundColor: "#171717",
+            backgroundColor: "#474747",
             borderWidth: "3px",
             boxShadow: "0px 0px 19px 2px rgba(255,255,255,1)",
           }}

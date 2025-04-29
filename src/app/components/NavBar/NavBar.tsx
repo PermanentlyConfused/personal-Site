@@ -1,6 +1,5 @@
-import "@/app/CustomCSS/NavStyle.css";
 import { scrollToSection } from "@/app/Helper/Helper";
-
+import { memo } from "react";
 import Image from "next/image";
 import Dog from "@/assets/dog.png";
 import pop from "@/assets/popping.gif";
@@ -20,6 +19,7 @@ const NavBar: React.FC = () => {
         ></Image>
         <Image
           src={pop.src}
+          unoptimized
           alt="asdasdasd"
           width={70}
           height={70}
@@ -31,7 +31,7 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        onClick={() => scrollToSection("topRight")}
+        onClick={() => scrollToSection("topRight", true)}
         className="flex aspect-square -rotate-2 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         <div className="text-lg text-black md:text-2xl lg:text-xl">
@@ -58,7 +58,7 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        onClick={() => scrollToSection("midRight")}
+        onClick={() => scrollToSection("botLeft")}
         className="flex aspect-square -rotate-6 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         <div className="px-2 text-lg text-wrap text-black md:text-2xl lg:text-xl">
@@ -78,4 +78,4 @@ const NavBar: React.FC = () => {
   );
 };
 
-export default NavBar;
+export default memo(NavBar);

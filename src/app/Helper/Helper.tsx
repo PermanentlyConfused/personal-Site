@@ -1,9 +1,9 @@
-export function scrollToSection(id: string) {
+export function scrollToSection(id: string, top?: boolean) {
   const target = document.getElementById(id);
   if (target) {
     target.scrollIntoView({
       behavior: "smooth",
-      block: "center",
+      block: top ? "nearest" : "center",
       inline: "center",
     });
   }
