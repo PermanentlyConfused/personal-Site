@@ -3,7 +3,7 @@ import { scrollToSection } from "@/app/Helper/Helper";
 
 import Image from "next/image";
 import Dog from "@/assets/dog.png";
-
+import pop from "@/assets/popping.gif";
 const NavBar: React.FC = () => {
   return (
     <div className="mt-10 grid grid-cols-2 grid-rows-3 gap-x-10 gap-y-5 lg:my-15">
@@ -16,7 +16,14 @@ const NavBar: React.FC = () => {
           alt="asdasdasd"
           width={120}
           height={120}
-          className="absolute -top-[80px] left-0"
+          className="absolute -top-[79px] left-0"
+        ></Image>
+        <Image
+          src={pop.src}
+          alt="asdasdasd"
+          width={70}
+          height={70}
+          className="absolute top-[103px] left-30"
         ></Image>
         <div className="text-lg text-black md:text-2xl lg:text-xl">
           About Me
@@ -42,7 +49,7 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        onClick={() => scrollToSection("midRight")}
+        onClick={() => scrollToSection("midCenter")}
         className="flex aspect-square rotate-1 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         <div className="text-lg text-black md:text-2xl lg:text-xl">
@@ -51,10 +58,10 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        onClick={() => scrollToSection("botLeft")}
+        onClick={() => scrollToSection("midRight")}
         className="flex aspect-square -rotate-6 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
-        <div className="text-lg text-black md:text-2xl lg:text-xl">
+        <div className="px-2 text-lg text-wrap text-black md:text-2xl lg:text-xl">
           Shower Thoughts
         </div>
       </a>

@@ -39,13 +39,46 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - Color Scheme: [link](https://www.color-hex.com/color-palette/104061)
 
-      {/* <main className="lg:p-b-10 mx-auto min-h-screen max-w-screen-xl px-6 py-5 font-sans md:px-12 md:py-10">
-        <div className="flex-col font-[family-name:var(--font-montserrat)] lg:flex lg:flex-row lg:justify-around">
-          <LeftPanel />
+       {/* Expanded Box */}
+        <AnimatePresence>
+          {expanded !== null && (
+            <motion.div
+              key="expanded-box"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="bg-opacity-90 fixed inset-0 my-3 mr-16 ml-9 flex items-center justify-center rounded-lg bg-black"
+              onClick={() => setExpanded(null)}
+            >
+              <div className="flex flex-col items-center justify-center rounded-xl bg-white p-10 text-3xl text-black shadow-lg">
+                Box {expanded + 1} Content
+                <p className="mt-4 text-base">Click anywhere to close</p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-          <div className="lg:flex lg:max-h-screen lg:w-[45%] lg:flex-col lg:justify-between lg:py-5">
-            <NavBar />
-          </div>
-        </div>
-      </main>
-      <Footer /> */}
+        {/* Button Grid */}
+        <AnimatePresence>
+          {expanded === null && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="flex flex-row flex-wrap items-center justify-center gap-5 rounded-lg bg-black py-10"
+            >
+              {boxes.map((_, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => setExpanded(idx)}
+                  className="flex h-70 w-70 cursor-pointer flex-row items-center justify-center bg-white transition hover:bg-[#5fa3fa]/30"
+                >
+                  <span className="text-black">Box {idx + 1}</span>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>

@@ -13,7 +13,7 @@ const LeftPanel: React.FC = () => {
         initial={{ opacity: 0, x: -1000 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{
-          duration: 0.8,
+          duration: 1.25,
           delay: 0,
           ease: [0, 0.71, 0.2, 1.01],
         }}
@@ -25,7 +25,7 @@ const LeftPanel: React.FC = () => {
             animate={{ y: 0 }}
             transition={{
               duration: 0.25,
-              delay: 0.4,
+              delay: 1,
             }}
             className="pin hidden lg:block"
           ></motion.i>
