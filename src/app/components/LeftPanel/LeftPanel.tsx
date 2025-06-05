@@ -14,7 +14,7 @@ const LeftPanel: React.FC = () => {
           <i className="pin hidden lg:block"></i>
           <h1 className="text-4xl text-slate-900 sm:text-5xl">Art Nguyen</h1>
           <h1 className="mt-3 text-lg tracking-tight text-slate-900 sm:text-xl">
-            Computer Engineer <br></br>@Clarkson University
+            Computer Engineer & Fullstack Dev <br></br>@Clarkson University
           </h1>
 
           <div className="group mt-4 inline-block max-w-xs leading-normal">

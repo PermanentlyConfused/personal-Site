@@ -9,7 +9,7 @@ const BoidsProj: React.FC = () => {
       {/* First row*/}
       <div className="flex flex-row justify-center">
         <div className="flex w-[60%] flex-col px-4">
-          <h1>Boids Simulation on Procedural Generated World</h1>
+          <h1>Boids Simulation on Procedurally Generated World</h1>
           <p className="text-base">
             This project started off as "Can I build Minecraft from scratch?". I
             found out very quickly that the short answer was "No" as there were
@@ -63,8 +63,8 @@ const BoidsProj: React.FC = () => {
           <p className="text-base">
             For this world's generation, I have a total of 6 layers of perlin
             noise octaves 3,6,12,25,50,80. By summing up all of these signals
-            while halving their weights for each octave, we are able to have a
-            1D signal that looks "random" with decent fine details. In order to
+            while halving their weights for each octave, I was able to have a 1D
+            signal that looks "random" with decent fine details. In order to
             convert this to 2D plane, I created a 2D matrix(based on window
             width and height) and computed the weighted sum of noise values for
             each grid cell. Lastly, I created a range based on min/max values in
@@ -80,7 +80,7 @@ const BoidsProj: React.FC = () => {
             Boids Algorithm(Flocks of Birds Simulation)
           </h2>
           <p className="text-base">
-            Boid's algorithm is simple can be broken up into three main
+            Boid's algorithm is simple and can be broken up into three main
             concepts: Separation, Alignment, and Cohesion. Each of the "bird" in
             the flock is an object that has its own position, velocity, and
             acceleration vectors that can interact with other object's
@@ -90,12 +90,14 @@ const BoidsProj: React.FC = () => {
             individual boid based on the other boids' velocity that are in close
             proximity. Cohesion acts as a reverse separation force to keep the
             boids in a group together by directing the acceleration vector
-            towards the center of the local boid group. While the behaviour of
-            the "birds" can be adjusted by modifying the weights of the main
-            concepts.
+            towards the center of the local boid group. I wanted the birds to
+            avoid very high terrains so I ran a BFS algorithm on the map to get
+            "clumps" of the snow terrains in close proximity and create an
+            acceleration vector directing the boids AWAY from the center of
+            these "clumps".
           </p>
         </div>
-        <div className="flex w-[40%] flex-col items-center">
+        <div className="flex w-[40%] flex-col items-center justify-center">
           <Image
             src={boidsSped.src}
             alt="BoidsSped gif"

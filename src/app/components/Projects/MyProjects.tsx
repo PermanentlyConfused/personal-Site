@@ -82,6 +82,7 @@ const MyProjects: React.FC = () => {
           className="flex h-full w-full rounded-xl"
         >
           {/* Expanded Box */}
+
           <AnimatePresence>
             {expanded !== null && (
               <motion.div
@@ -106,6 +107,7 @@ const MyProjects: React.FC = () => {
           </AnimatePresence>
 
           {/* Button Grid */}
+
           <AnimatePresence>
             {expanded === null && showBoxes && (
               <motion.div
@@ -116,8 +118,11 @@ const MyProjects: React.FC = () => {
                   duration: 0.3,
                   delay: hasAnimated ? 0 : 0.2,
                 }}
-                className="flex flex-row flex-wrap items-center justify-center gap-5 rounded-lg py-10"
+                className="flex w-full flex-row flex-wrap items-center justify-center gap-5 rounded-lg py-10"
               >
+                <h1 className="absolute top-20 font-[family-name:var(--font-montserrat)] text-4xl font-semibold text-white">
+                  Some Projects I Did
+                </h1>
                 {boxes.map((_, idx) => (
                   <div
                     key={idx}
@@ -125,24 +130,74 @@ const MyProjects: React.FC = () => {
                     className="flex h-70 w-70 cursor-pointer flex-row items-center justify-center text-center transition"
                   >
                     {idx == 0 && (
-                      <span className="text-black">
-                        AI Enabled FPGA-based Robotic Hand
-                      </span>
+                      <motion.div
+                        initial={{
+                          borderColor: "transparent",
+                          borderWidth: "1px",
+                          boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0)",
+                        }}
+                        whileHover={{
+                          borderColor: "#ffffff",
+                          boxShadow: "0px 0px 19px 2px rgba(255,255,255,1)",
+                        }}
+                        transition={{
+                          duration: 0.5,
+                          delay: 0,
+                          ease: "easeInOut",
+                        }}
+                        className="group/project-0 flex h-full items-end rounded-xl bg-[url('@/assets/Projects/Fingerprint/fingerprintThumbnail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
+                      >
+                        <span className="mb-7 px-5 font-semibold text-black transition-colors duration-300 group-hover/project-0:text-white">
+                          AI Enabled FPGA-based Robotic Hand
+                        </span>
+                      </motion.div>
                     )}
                     {idx == 1 && (
-                      <div className="group/project-1 flex h-full items-end rounded-xl bg-[url('@/assets/Projects/Fingerprint/fingerprintThumbnail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800">
+                      <motion.div
+                        initial={{
+                          borderColor: "transparent",
+                          borderWidth: "1px",
+                          boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0)",
+                        }}
+                        whileHover={{
+                          borderColor: "#ffffff",
+                          boxShadow: "0px 0px 19px 2px rgba(255,255,255,1)",
+                        }}
+                        transition={{
+                          duration: 0.5,
+                          delay: 0,
+                          ease: "easeInOut",
+                        }}
+                        className="group/project-1 flex h-full items-end rounded-xl bg-[url('@/assets/Projects/Fingerprint/fingerprintThumbnail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
+                      >
                         <span className="mb-7 font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white">
                           FPGA-based Children Fingerprint Sensor and
                           Authentication system
                         </span>
-                      </div>
+                      </motion.div>
                     )}
                     {idx == 2 && (
-                      <div className="group/project-2 flex h-full items-end rounded-xl bg-[url('@/assets/Projects/Boids/BoidsThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800">
+                      <motion.div
+                        initial={{
+                          borderColor: "transparent",
+                          borderWidth: "1px",
+                          boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0)",
+                        }}
+                        whileHover={{
+                          borderColor: "#ffffff",
+                          boxShadow: "0px 0px 19px 2px rgba(255,255,255,1)",
+                        }}
+                        transition={{
+                          duration: 0.5,
+                          delay: 0,
+                          ease: "easeInOut",
+                        }}
+                        className="group/project-2 flex h-full items-end rounded-xl bg-[url('@/assets/Projects/Boids/BoidsThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
+                      >
                         <span className="mb-7 font-semibold text-black transition-colors duration-300 group-hover/project-2:text-white">
                           Boids Simulation on Procedural Generated World
                         </span>
-                      </div>
+                      </motion.div>
                     )}
                     {/* {idx == 3 && (
                       <div className="group/project-1 flex h-full w-full items-end justify-center rounded-xl bg-[url('@/assets/Projects/NagUTron/ThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800">
