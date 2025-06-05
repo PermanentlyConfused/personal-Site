@@ -19,7 +19,7 @@ const Current: React.FC = () => {
         <div className="flex h-full w-full flex-col rounded-lg bg-black p-5">
           <h1 className="text-gray-400">What I'm up to</h1>
           <p className="text-sm text-gray-300">
-            Currently on co-op @Cspeed. Hopefully finish college soon🤞
+            @ Clarkson University. Hopefully finish college soon🤞
           </p>
           <p className="text-sm text-gray-300">
             Looking for projects to contribute to

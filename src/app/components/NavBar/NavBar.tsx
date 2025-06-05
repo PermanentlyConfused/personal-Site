@@ -3,11 +3,16 @@ import { memo } from "react";
 import Image from "next/image";
 import Dog from "@/assets/dog.png";
 import pop from "@/assets/popping.gif";
+
 const NavBar: React.FC = () => {
+  const openPDF = () => {
+    const pdfUrl = "/docs/ResumeV2.pdf";
+    window.open(pdfUrl, "_blank");
+  };
   return (
     <div className="mt-10 grid grid-cols-2 grid-rows-3 gap-x-10 gap-y-5 lg:my-15">
       <a
-        onClick={() => scrollToSection("topLeft")}
+        href="/about"
         className="flex aspect-square rotate-2 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         <Image
@@ -31,7 +36,7 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        onClick={() => scrollToSection("topRight", true)}
+        onClick={() => scrollToSection("topRight")}
         className="flex aspect-square -rotate-2 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
         <div className="text-lg text-black md:text-2xl lg:text-xl">
@@ -40,12 +45,10 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        onClick={() => scrollToSection("midLeft")}
+        onClick={() => openPDF()}
         className="flex aspect-square -rotate-3 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:shadow-xl"
       >
-        {/* <div className="flex aspect-square h-[60%] items-center text-center justify-center bg-blue-800"> */}
         <div className="text-lg text-black md:text-2xl lg:text-xl">Resumé</div>
-        {/* </div> */}
       </a>
 
       <a

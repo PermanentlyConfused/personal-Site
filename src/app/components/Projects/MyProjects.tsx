@@ -2,13 +2,14 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import FPGAHandProject from "./ProjectsFolder/FPGAHandProject";
+import BoidsProj from "./ProjectsFolder/Boids";
 
-const boxes = [1, 2, 3, 4, 5];
+const boxes = [1, 2, 3];
 const MyProjects: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
   const [showBoxes, setShowBoxes] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
-  console.log("asd");
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBoxes(true);
@@ -18,10 +19,10 @@ const MyProjects: React.FC = () => {
   }, []);
   return (
     <div>
-      <div className="-left-200 h-auto w-50 bg-linear-to-r from-lime-300/10 to-lime-300/80 p-5 py-3 text-center text-3xl font-semibold text-black drop-shadow-xl">
+      <div className="w-50 bg-linear-to-r from-lime-300/10 to-lime-300/80 p-5 py-3 text-center text-3xl font-semibold text-black drop-shadow-xl">
         <p>Projects</p>
       </div>
-      <div className="group duration:500 relative mt-6 h-[720px] w-[1080px] rotate-1 rounded-3xl border-2 border-slate-500 bg-slate-300 py-3 pr-16 pl-9 drop-shadow-xl transition hover:rotate-0 lg:flex lg:flex-col lg:items-center lg:justify-between">
+      <div className="group duration:500 relative mt-12 h-[720px] w-[1080px] rounded-3xl border-2 border-slate-500 bg-slate-300 py-3 pr-16 pl-9 drop-shadow-xl lg:flex lg:flex-col lg:items-center lg:justify-between">
         {/* make these borders glow white when active */}
 
         <motion.div
@@ -72,7 +73,7 @@ const MyProjects: React.FC = () => {
           }}
           whileInView={{
             borderColor: "#ffffff",
-            backgroundColor: "#474747",
+            backgroundColor: "#101828",
             borderWidth: "3px",
             boxShadow: "0px 0px 19px 2px rgba(255,255,255,1)",
           }}
@@ -89,13 +90,17 @@ const MyProjects: React.FC = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
-                className="bg-opacity-90 fixed inset-0 my-3 mr-16 ml-9 flex items-center justify-center rounded-lg bg-black"
+                className="absolute inset-[0.5] my-4 mr-17 ml-10 flex items-center justify-center overflow-y-auto rounded-lg bg-black"
                 onClick={() => setExpanded(null)}
               >
-                <div className="flex flex-col items-center justify-center rounded-xl bg-white p-10 text-3xl text-black shadow-lg">
-                  Box {expanded + 1} Content
-                  <p className="mt-4 text-base">Click anywhere to close</p>
-                </div>
+                {expanded == 0 && <FPGAHandProject />}
+                {expanded == 1 && (
+                  <div className="flex flex-col items-center justify-center rounded-xl bg-white p-10 text-3xl text-black shadow-lg">
+                    Box {expanded + 1} Content
+                    <p className="mt-4 text-base">Click anywhere to close</p>
+                  </div>
+                )}
+                {expanded == 2 && <BoidsProj />}
               </motion.div>
             )}
           </AnimatePresence>
@@ -117,9 +122,35 @@ const MyProjects: React.FC = () => {
                   <div
                     key={idx}
                     onClick={() => setExpanded(idx)}
-                    className="flex h-70 w-70 cursor-pointer flex-row items-center justify-center bg-white transition hover:bg-[#5fa3fa]/30"
+                    className="flex h-70 w-70 cursor-pointer flex-row items-center justify-center text-center transition"
                   >
-                    <span className="text-black">Box {idx + 1}</span>
+                    {idx == 0 && (
+                      <span className="text-black">
+                        AI Enabled FPGA-based Robotic Hand
+                      </span>
+                    )}
+                    {idx == 1 && (
+                      <div className="group/project-1 flex h-full items-end rounded-xl bg-[url('@/assets/Projects/Fingerprint/fingerprintThumbnail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800">
+                        <span className="mb-7 font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white">
+                          FPGA-based Children Fingerprint Sensor and
+                          Authentication system
+                        </span>
+                      </div>
+                    )}
+                    {idx == 2 && (
+                      <div className="group/project-2 flex h-full items-end rounded-xl bg-[url('@/assets/Projects/Boids/BoidsThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800">
+                        <span className="mb-7 font-semibold text-black transition-colors duration-300 group-hover/project-2:text-white">
+                          Boids Simulation on Procedural Generated World
+                        </span>
+                      </div>
+                    )}
+                    {/* {idx == 3 && (
+                      <div className="group/project-1 flex h-full w-full items-end justify-center rounded-xl bg-[url('@/assets/Projects/NagUTron/ThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800">
+                        <span className="mb-7 font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white">
+                          Nag-U-Tron
+                        </span>
+                      </div>
+                    )} */}
                   </div>
                 ))}
               </motion.div>

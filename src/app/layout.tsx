@@ -22,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/logo2.png" type="image/png" />
+      </head>
       <body className={` ${montserrat.variable} scroll-smooth antialiased`}>
         {children}
       </body>
