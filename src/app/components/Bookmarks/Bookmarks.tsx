@@ -1,5 +1,3 @@
-"use client";
-import "./BookmarkStyle.css";
 import "@/app/CustomCSS/PinNTape.css";
 const MyBookMarks: React.FC = () => {
   return (

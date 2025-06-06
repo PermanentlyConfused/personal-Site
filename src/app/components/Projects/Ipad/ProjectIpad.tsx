@@ -1,12 +1,13 @@
 "use client";
+//!This component will not be rendered on small screens
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import FPGAHandProject from "./ProjectsFolder/FPGAHandProject";
-import BoidsProj from "./ProjectsFolder/Boids";
+import FPGAHandProject from "../ProjectsFolder/FPGAHandProject";
+import BoidsProj from "../ProjectsFolder/Boids";
 
 const boxes = [1, 2, 3];
-const MyProjects: React.FC = () => {
+const ProjectIpad: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
   const [showBoxes, setShowBoxes] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -18,23 +19,18 @@ const MyProjects: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div>
-      <div className="w-50 bg-linear-to-r from-lime-300/10 to-lime-300/80 p-5 py-3 text-center text-3xl font-semibold text-black drop-shadow-xl">
-        <p>Projects</p>
-      </div>
-      <div className="group duration:500 relative mt-12 h-[720px] w-[1080px] rounded-3xl border-2 border-slate-500 bg-slate-300 py-3 pr-16 pl-9 drop-shadow-xl lg:flex lg:flex-col lg:items-center lg:justify-between">
-        {/* make these borders glow white when active */}
-
+    <div className="hidden lg:block">
+      <div className="group duration:500 relative mt-12 h-[720px] w-[1080px] rounded-3xl bg-gray-800 px-9 py-8 drop-shadow-xl lg:flex lg:flex-col lg:items-center lg:justify-between">
         <motion.div
           initial={{
             borderColor: "#6b7280",
             backgroundColor: "#6b7280",
-            boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0)",
+            boxShadow: "0px 0px 0px 0px rgba(81,95,117, 0)",
           }}
           whileInView={{
-            borderColor: "#ffffff",
-            backgroundColor: "#ffffff", // gray-400
-            boxShadow: "0px 0px 19px 2px rgba(255,255,255,1)",
+            borderColor: "#90a1b9",
+            backgroundColor: "#90a1b9", // gray-400
+            boxShadow: "0px 0px 19px 2px rgba(81,95,117,1)",
           }}
           viewport={{ once: true }}
           transition={{
@@ -43,18 +39,18 @@ const MyProjects: React.FC = () => {
           }}
           className="absolute top-50 left-5 h-70 w-1 rounded-full"
         />
-        <motion.div
+        {/* <motion.div
           initial={{
             borderColor: "#6b7280",
             backgroundColor: "#6b7280",
             borderWidth: "3px",
-            boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0)",
+            boxShadow: "0px 0px 0px 0px rgba(81,95,117, 0)",
           }}
           whileInView={{
-            borderColor: "#ffffff",
-            backgroundColor: "#e2e8f0",
+            borderColor: "#90a1b9",
+            backgroundColor: "#90a1b9",
             borderWidth: "3px",
-            boxShadow: "0px 0px 19px 2px rgba(255,255,255,1)",
+            boxShadow: "0px 0px 19px 2px rgba(81,95,117,1)",
           }}
           viewport={{ once: true }}
           transition={{
@@ -62,20 +58,20 @@ const MyProjects: React.FC = () => {
             ease: "easeInOut",
           }}
           className="absolute top-[50%] right-2 h-12 w-12 rounded-full"
-        ></motion.div>
+        ></motion.div> */}
 
         <motion.div
           initial={{
             borderColor: "#6b7280",
             backgroundColor: "#000000",
             borderWidth: "3px",
-            boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0)",
+            boxShadow: "0px 0px 0px 0px rgba(81,95,117, 0)",
           }}
           whileInView={{
-            borderColor: "#ffffff",
+            borderColor: "#90a1b9",
             backgroundColor: "#101828",
             borderWidth: "3px",
-            boxShadow: "0px 0px 19px 2px rgba(255,255,255,1)",
+            boxShadow: "0px 0px 19px 2px rgba(81,95,117,1)",
           }}
           viewport={{ once: true }}
           transition={{ duration: 3.5, delay: 0, ease: "easeInOut" }}
@@ -91,7 +87,7 @@ const MyProjects: React.FC = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
-                className="absolute inset-[0.5] my-4 mr-17 ml-10 flex items-center justify-center overflow-y-auto rounded-lg bg-black"
+                className="absolute inset-[0.5] mt-9 mr-10 mb-8.5 ml-9.5 flex items-center justify-center overflow-y-auto rounded-lg bg-gray-700"
                 onClick={() => setExpanded(null)}
               >
                 {expanded == 0 && <FPGAHandProject />}
@@ -134,7 +130,7 @@ const MyProjects: React.FC = () => {
                         initial={{
                           borderColor: "transparent",
                           borderWidth: "1px",
-                          boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0)",
+                          boxShadow: "0px 0px 0px 0px rgba(255,255,255, 0)",
                         }}
                         whileHover={{
                           borderColor: "#ffffff",
@@ -157,7 +153,7 @@ const MyProjects: React.FC = () => {
                         initial={{
                           borderColor: "transparent",
                           borderWidth: "1px",
-                          boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0)",
+                          boxShadow: "0px 0px 0px 0px rgba(255,255,255, 0)",
                         }}
                         whileHover={{
                           borderColor: "#ffffff",
@@ -181,7 +177,7 @@ const MyProjects: React.FC = () => {
                         initial={{
                           borderColor: "transparent",
                           borderWidth: "1px",
-                          boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0)",
+                          boxShadow: "0px 0px 0px 0px rgba(255,255,255, 0)",
                         }}
                         whileHover={{
                           borderColor: "#ffffff",
@@ -217,4 +213,4 @@ const MyProjects: React.FC = () => {
   );
 };
 
-export default MyProjects;
+export default ProjectIpad;

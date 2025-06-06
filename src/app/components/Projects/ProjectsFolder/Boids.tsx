@@ -5,12 +5,14 @@ import perlinNoise from "@/assets/Projects/Boids/PerlinNoise1D.png";
 import boidsSped from "@/assets/Projects/Boids/BoidsSped.gif";
 const BoidsProj: React.FC = () => {
   return (
-    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 py-10 font-[family-name:var(--font-montserrat)] text-3xl text-white shadow-lg">
+    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:px-5 lg:py-10 lg:text-3xl lg:text-white lg:shadow-lg">
       {/* First row*/}
-      <div className="flex flex-row justify-center">
-        <div className="flex w-[60%] flex-col px-4">
-          <h1>Boids Simulation on Procedurally Generated World</h1>
-          <p className="text-base">
+      <div className="flex flex-col lg:flex-row lg:justify-center">
+        <div className="flex flex-col lg:w-[60%] lg:px-4">
+          <h1 className="font-bold">
+            Boids Simulation on Procedurally Generated World
+          </h1>
+          <p className="text-semibold text-base">
             This project started off as "Can I build Minecraft from scratch?". I
             found out very quickly that the short answer was "No" as there were
             too many different elements that has to come together to create the
@@ -22,10 +24,9 @@ const BoidsProj: React.FC = () => {
             without any occupants feels desolate and sad so I also added
             artificial birds through the use of Boid's algorithm to interact
             with the world.
-            <br />
           </p>
         </div>
-        <div className="flex w-[40%] flex-col items-center pt-4">
+        <div className="flex flex-col items-center pt-4 lg:w-[40%]">
           <Image
             src={worldGeneration.src}
             alt="GenerationSped gif"
@@ -40,10 +41,10 @@ const BoidsProj: React.FC = () => {
           </p>
         </div>
       </div>
-
+      <hr className="my-1 lg:mr-0" />
       {/* Row2 */}
-      <div className="flex flex-row justify-center">
-        <div className="flex w-[50%] flex-col items-center justify-center pl-4">
+      <div className="flex flex-col lg:flex-row lg:justify-center">
+        <div className="flex flex-col items-center justify-center lg:w-[50%] lg:pl-4">
           <Image
             src={perlinNoise.src}
             alt="perlin noise 1D plot"
@@ -57,9 +58,9 @@ const BoidsProj: React.FC = () => {
             Picture 2: Summized 6 Perlin Noise Layers on 1D
           </p>
         </div>
-        <div className="flex w-[50%] flex-col pl-4">
-          <h1>Technical Stuff</h1>
-          <h1 className="text-xl">Perlin Noise & Generation:</h1>
+        <div className="flex flex-col lg:w-[50%] lg:pl-4">
+          <h1 className="font-bold">Technical Stuff</h1>
+          <h1 className="text-2xl">Perlin Noise & Generation:</h1>
           <p className="text-base">
             For this world's generation, I have a total of 6 layers of perlin
             noise octaves 3,6,12,25,50,80. By summing up all of these signals
@@ -71,11 +72,10 @@ const BoidsProj: React.FC = () => {
             the 2D matrix to normalize and create a integer-based mapping for
             the terrain.
           </p>
-          <br />
         </div>
       </div>
-      <div className="flex flex-row justify-center">
-        <div className="flex w-[60%] flex-col px-4">
+      <div className="flex flex-col justify-center lg:flex-row">
+        <div className="flex flex-col lg:w-[60%] lg:px-4">
           <h2 className="text-2xl">
             Boids Algorithm(Flocks of Birds Simulation)
           </h2>
@@ -97,7 +97,7 @@ const BoidsProj: React.FC = () => {
             these "clumps".
           </p>
         </div>
-        <div className="flex w-[40%] flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center lg:w-[40%]">
           <Image
             src={boidsSped.src}
             alt="BoidsSped gif"

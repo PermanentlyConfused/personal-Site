@@ -139,3 +139,19 @@
   -ms-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
 }
+
+.blokken {
+  position: relative;
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  background-image: linear-gradient(
+    to bottom,
+    #f6eee3 calc(1em - 1px),
+    #ccc calc(1em - 1px),
+    #ccc 1em,
+    #f6eee3 1em
+  );
+  background-position: 0% 1em;
+  background-size: 100% 1em;
+  background-repeat: repeat-y;
+}

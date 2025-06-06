@@ -1,10 +1,11 @@
 "use client";
 import { useEffect } from "react";
 
-import MyProjects from "@/app/components/Projects/MyProjects";
+import ProjectIpad from "@/app/components/Projects/Ipad/ProjectIpad";
 import MyBookMarks from "@/app/components/Bookmarks/Bookmarks";
 import LeftPanel from "@/app/components/LeftPanel/LeftPanel";
 import NavBar from "@/app/components/NavBar/NavBar";
+import ProjectNotePad from "@/app/components/Projects/ProjectNotePad.tsx/ProjectNotePad";
 
 export default function Home() {
   // useEffect(() => {
@@ -56,37 +57,25 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      className="grid grid-cols-2 grid-rows-2"
-      style={{
-        gridTemplateColumns: "1920px 1920px",
-        gridTemplateRows: "1080px 1080px",
-      }}
-    >
-      <div id="home" className="homeBG font-sans md:px-12 md:py-25">
-        <div className="mx-[23%] flex-col font-[family-name:var(--font-montserrat)] lg:flex lg:flex-row lg:justify-between">
+    <div>
+      <div id="home" className="homeBG font-sans lg:px-12 lg:py-25">
+        <div className="flex-col justify-center font-[family-name:var(--font-montserrat)] lg:flex lg:flex-row lg:gap-20">
           <LeftPanel />
-          <div className="lg:92[45%] lg:flex lg:max-h-[1080px] lg:flex-col lg:justify-between lg:py-5">
-            <NavBar />
-          </div>
+          <NavBar />
         </div>
       </div>
-
-      <div id="topRight" className="homeBG flex flex-col text-black">
-        <p className="relative top-10 left-20 mt-20 h-auto w-50 bg-linear-to-r from-amber-500/20 to-amber-500/80 py-2 text-center text-3xl font-semibold text-black drop-shadow-xl">
-          Bookmarks
-        </p>
-        <MyBookMarks />
-      </div>
-
       <div
         id="midCenter"
-        className="homeBG flex flex-col items-center justify-center text-black"
+        className="homeBG flex flex-col items-center justify-center py-20 text-black"
       >
-        <MyProjects />
+        <div className="w-50 bg-linear-to-r from-lime-300/10 to-lime-300/80 py-3 text-center text-3xl font-semibold text-black drop-shadow-xl">
+          <p>Projects</p>
+        </div>
+        <ProjectIpad />
+        <ProjectNotePad />
       </div>
-
-      <div id="midRight" className="homeBG text-black"></div>
+      {/* <MyBookMarks /> */}
+      {/* <div id="midRight" className="homeBG text-black"></div> */}
     </div>
   );
 }
