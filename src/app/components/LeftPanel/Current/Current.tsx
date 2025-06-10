@@ -13,7 +13,7 @@ const Current: React.FC = () => {
         delay: 0,
         ease: [0, 0.2, 0.2, 1.01],
       }}
-      className="relative mt-6 hidden h-48 w-96 -rotate-7 rounded-3xl bg-gray-800 p-4 lg:flex lg:flex-col lg:items-center lg:justify-between"
+      className="mt-6 hidden h-48 w-96 -rotate-7 rounded-3xl bg-gray-800 p-4 lg:relative lg:flex lg:flex-col lg:items-center lg:justify-between"
     >
       <div className="h-full w-full rounded-xl bg-black">
         <div className="flex h-full w-full flex-col rounded-lg bg-black p-5">

@@ -2,8 +2,9 @@
 import { useEffect } from "react";
 
 import ProjectIpad from "@/app/components/Projects/Ipad/ProjectIpad";
-import MyBookMarks from "@/app/components/Bookmarks/Bookmarks";
+
 import LeftPanel from "@/app/components/LeftPanel/LeftPanel";
+
 import NavBar from "@/app/components/NavBar/NavBar";
 import ProjectNotePad from "@/app/components/Projects/ProjectNotePad.tsx/ProjectNotePad";
 
@@ -57,8 +58,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <div id="home" className="homeBG font-sans lg:px-12 lg:py-25">
+    <div className="homeBG h-full lg:mx-10">
+      <div id="home" className="font-sans lg:px-12 lg:py-10">
         <div className="flex-col justify-center font-[family-name:var(--font-montserrat)] lg:flex lg:flex-row lg:gap-20">
           <LeftPanel />
           <NavBar />
@@ -66,14 +67,15 @@ export default function Home() {
       </div>
       <div
         id="midCenter"
-        className="homeBG flex flex-col items-center justify-center py-20 text-black"
+        className="flex flex-col items-center justify-center text-black"
       >
-        <div className="w-50 bg-linear-to-r from-lime-300/10 to-lime-300/80 py-3 text-center text-3xl font-semibold text-black drop-shadow-xl">
+        {/* <div className="w-50 bg-linear-to-r from-lime-300/10 to-lime-300/80 py-3 text-center text-3xl font-semibold text-black drop-shadow-xl">
           <p>Projects</p>
-        </div>
-        <ProjectIpad />
-        <ProjectNotePad />
+        </div> */}
+        {/* <ProjectIpad />
+        <ProjectNotePad /> */}
       </div>
+      {/* <Footer /> */}
       {/* <MyBookMarks /> */}
       {/* <div id="midRight" className="homeBG text-black"></div> */}
     </div>

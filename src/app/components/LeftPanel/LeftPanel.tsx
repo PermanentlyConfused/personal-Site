@@ -8,8 +8,8 @@ import "@/app/CustomCSS/PinNTape.css";
 
 const LeftPanel: React.FC = () => {
   return (
-    <div>
-      <header className="flex hidden lg:top-0 lg:flex lg:max-h-fit lg:w-[100%] lg:flex-col lg:justify-between">
+    <div className="flex flex-col items-center">
+      <header className="flex lg:top-0 lg:flex lg:max-h-fit lg:w-[100%] lg:flex-col lg:justify-between">
         <div className="box-1 rotate-0 rounded-md border-1 border-solid border-black lg:rotate-2">
           <i className="pin hidden lg:block"></i>
           <h1 className="text-4xl text-slate-900 sm:text-5xl">Art Nguyen</h1>
@@ -26,8 +26,10 @@ const LeftPanel: React.FC = () => {
                 I love sleep more💤.
               </div>
             </div>
-            <div className="img-tape img-tape--2 md:left-[5%] lg:left-[5%]">
-              <img src={Snortlax.src} alt="Picture of snortlax" />
+            <div className="hidden lg:block">
+              <div className="img-tape img-tape--2 md:left-[5%] lg:left-[5%]">
+                <img src={Snortlax.src} alt="Picture of snortlax" />
+              </div>
             </div>
           </div>
           <IconContext.Provider value={{ className: "mt-5", size: "30" }}>
