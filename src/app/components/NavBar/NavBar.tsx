@@ -18,8 +18,7 @@ const NavBar: React.FC = () => {
       >
         <Image
           src={Dog.src}
-          alt="asdasdasd"
-          unoptimized
+          alt="dog_peeking.jpeg"
           width={120}
           height={120}
           className="absolute -top-20 left-0"
@@ -27,7 +26,7 @@ const NavBar: React.FC = () => {
         <Image
           src={pop.src}
           unoptimized
-          alt="asdasdasd"
+          alt="me_popping.jpg"
           width={70}
           height={70}
           className="absolute top-19.5 left-25 h-20 w-15 lg:top-26 lg:left-30 lg:h-23 lg:w-18"
@@ -43,7 +42,7 @@ const NavBar: React.FC = () => {
         <Image
           src={bookmark.src}
           unoptimized
-          alt="asdasdasd"
+          alt="mePointBook.jpg"
           width={70}
           height={70}
           className="absolute top-21.5 left-25 h-20 w-15 lg:top-28 lg:left-30 lg:h-23 lg:w-18"

@@ -50,7 +50,6 @@ const BoidsProj: React.FC = () => {
             alt="perlin noise 1D plot"
             height={250}
             width={400}
-            unoptimized
             className="rounded-xl"
           />
           <p className="text-center text-base">
