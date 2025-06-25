@@ -3,6 +3,7 @@ import { memo } from "react";
 import Image from "next/image";
 import Dog from "@/assets/dog.png";
 import pop from "@/assets/popping.gif";
+import bookmark from "@/assets/bookmarks.png";
 
 const NavBar: React.FC = () => {
   const openPDF = () => {
@@ -38,6 +39,15 @@ const NavBar: React.FC = () => {
         onClick={() => scrollToSection("topRight")}
         className="flex aspect-square w-40 -rotate-2 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:w-full lg:shadow-xl"
       >
+        {" "}
+        <Image
+          src={bookmark.src}
+          unoptimized
+          alt="asdasdasd"
+          width={70}
+          height={70}
+          className="absolute top-21.5 left-25 h-20 w-15 lg:top-28 lg:left-30 lg:h-23 lg:w-18"
+        ></Image>
         <div className="text-lg text-black lg:text-xl">Bookmarks</div>
       </a>
 
