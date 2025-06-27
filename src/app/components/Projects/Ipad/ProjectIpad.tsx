@@ -141,7 +141,7 @@ const ProjectIpad: React.FC = () => {
                           delay: 0,
                           ease: "easeInOut",
                         }}
-                        className="group/project-0 flex h-full items-end rounded-xl bg-[url('@/assets/Projects/Fingerprint/fingerprintThumbnail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
+                        className="group/project-0 flex h-full items-end rounded-xl bg-[url('@/assets/Projects/FPGAHand/ThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
                       >
                         <span className="mb-7 px-5 font-semibold text-black transition-colors duration-300 group-hover/project-0:text-white">
                           AI Enabled FPGA-based Robotic Hand

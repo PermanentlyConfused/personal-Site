@@ -20,18 +20,18 @@ const OpenPDFButton: React.FC = () => {
 };
 const FPGAHandProject: React.FC = () => {
   return (
-    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 py-10 font-[family-name:var(--font-montserrat)] text-3xl text-white shadow-lg">
+    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:px-5 lg:py-10 lg:text-3xl lg:text-white">
       {/* First row*/}
-      <div className="flex flex-row justify-center">
-        <div className="flex w-[60%] flex-col pr-4">
+      <div className="flex flex-col lg:flex-row lg:justify-center">
+        <div className="flex flex-col lg:w-[60%] lg:px-4">
           <h1>AI Enabled FPGA-based Robotic Hand</h1>
           <p className="text-base">
             This project presents an AI-powered robotic hand system capable of
             real-time object detection and interaction through ultilizing the
-            AMD-Xilinx KR260 FPGA platform. At its core, the system utilizes a
+            AMD-Xilinx KR260 FPGA platform. At its core, the design utilizes a
             hardware-accelerated YOLOv7 model running on the FPGA’s{" "}
             <b>Deep Learning Processing Unit (DPU)</b> to achieve efficient and
-            low-latency visual recognition. The KR260 also integrates key
+            low-latency visual recognition. The design also integrates key
             interfaces such as I2C for peripheral communication and PWM for
             precise motor control. Upon detecting objects through its vision
             module, the robotic hand interprets the scene and executes
@@ -41,8 +41,7 @@ const FPGAHandProject: React.FC = () => {
             automation application.
           </p>
         </div>
-        <div className="flex w-[40%] flex-col items-center pl-4">
-          {" "}
+        <div className="flex flex-col items-center pt-4 lg:w-[40%]">
           <Image
             src={kr260.src}
             alt="asdasdasd"
@@ -55,8 +54,36 @@ const FPGAHandProject: React.FC = () => {
           </p>
         </div>
       </div>
-      {/* Second Row */}
+      <hr className="my-1 lg:mr-0" />
 
+      {/* Row2 */}
+      <div className="lg:justify-left flex flex-col lg:flex-row">
+        <div className="flex flex-col items-center"></div>
+        <div className="flex flex-col lg:pl-4">
+          <h1 className="font-bold">Technical Stuff</h1>
+          <h1 className="text-2xl">Creating the Overlay:</h1>
+          <p className="text-base">
+            In the context of AMD's KR SoMs, an overlay refers to a programmable
+            design for the SOM's Programmable Logic (PL)
+          </p>
+        </div>
+      </div>
+      {/* Row3 */}
+      <div className="flex flex-col lg:flex-row lg:justify-center">
+        <div className="llg:pl-4 flex flex-col items-center justify-center">
+          <Image
+            src={pipeline.src}
+            alt="perlin noise 1D plot"
+            height={250}
+            width={756}
+            className="rounded-xl"
+          />
+          <p className="text-center text-base">
+            {" "}
+            Picture 2: Pipeline to Integrate DPU to an overlay
+          </p>
+        </div>
+      </div>
       <OpenPDFButton></OpenPDFButton>
     </div>
   );

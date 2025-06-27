@@ -59,7 +59,7 @@ export default function Home() {
 
   return (
     <div className="homeBG h-full lg:mx-10">
-      <DoodleBackgrounds />
+      {/* <DoodleBackgrounds /> */}
       <div id="home" className="font-sans lg:px-12 lg:py-10">
         <div className="flex-col justify-center font-[family-name:var(--font-montserrat)] lg:flex lg:flex-row lg:gap-20">
           <LeftPanel />
