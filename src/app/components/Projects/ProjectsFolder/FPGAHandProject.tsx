@@ -24,7 +24,7 @@ const FPGAHandProject: React.FC = () => {
       {/* First row*/}
       <div className="flex flex-col lg:flex-row lg:justify-center">
         <div className="flex flex-col lg:w-[60%] lg:px-4">
-          <h1>AI Enabled FPGA-based Robotic Hand</h1>
+          <h1 className="font-bold">AI Enabled FPGA-based Robotic Hand</h1>
           <p className="text-base">
             This project presents an AI-powered robotic hand system capable of
             real-time object detection and interaction through ultilizing the

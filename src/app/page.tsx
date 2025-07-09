@@ -70,7 +70,7 @@ export default function Home() {
         id="midCenter"
         className="flex flex-col items-center justify-center py-20 text-black"
       >
-        <div className="w-50 bg-linear-to-r from-lime-300/10 to-lime-300/80 py-3 text-center text-3xl font-semibold text-black drop-shadow-xl">
+        <div className="w-50 bg-linear-to-r from-[#eee7d7]/70 to-[#e5cbba]/80 py-3 text-center text-3xl font-semibold text-black drop-shadow-lg lg:hidden">
           <p>Projects</p>
         </div>
         <ProjectIpad />

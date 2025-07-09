@@ -35,7 +35,7 @@ const BoidsProj: React.FC = () => {
             unoptimized
             className="rounded-xl"
           />
-          <p className="text-center text-base">
+          <p className="mt-2 text-center text-base">
             {" "}
             Picture 1: World Generation of 600x600 world{" "}
           </p>

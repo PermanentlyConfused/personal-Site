@@ -21,6 +21,7 @@ const NavBar: React.FC = () => {
           alt="dog_peeking.jpeg"
           width={120}
           height={120}
+          unoptimized
           className="absolute -top-20 left-0"
         ></Image>
         <Image
