@@ -4,6 +4,7 @@ import Image from "next/image";
 import Dog from "@/assets/dog.png";
 import pop from "@/assets/popping.gif";
 import bookmark from "@/assets/bookmarks.png";
+import construction from "@/assets/under.png";
 
 const NavBar: React.FC = () => {
   const openPDF = () => {
@@ -59,6 +60,7 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
+        href="/projects"
         onClick={() => scrollToSection("midCenter")}
         className="flex aspect-square w-40 rotate-1 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:w-full lg:shadow-xl"
       >
@@ -69,6 +71,23 @@ const NavBar: React.FC = () => {
         onClick={() => scrollToSection("botLeft")}
         className="flex aspect-square w-40 -rotate-6 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:w-full lg:shadow-xl"
       >
+        {" "}
+        <Image
+          src={construction.src}
+          unoptimized
+          alt="mePointBook.jpg"
+          width={200}
+          height={200}
+          className="absolute bottom-20 opacity-80"
+        ></Image>
+        <Image
+          src={construction.src}
+          unoptimized
+          alt="mePointBook.jpg"
+          width={200}
+          height={200}
+          className="absolute top-20 opacity-80"
+        ></Image>
         <div className="px-2 text-lg text-wrap text-black lg:text-xl">
           Shower Thoughts
         </div>
@@ -78,6 +97,22 @@ const NavBar: React.FC = () => {
         onClick={() => scrollToSection("botRight")}
         className="flex aspect-square w-40 -rotate-4 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:w-full lg:shadow-xl"
       >
+        <Image
+          src={construction.src}
+          unoptimized
+          alt="mePointBook.jpg"
+          width={200}
+          height={200}
+          className="absolute bottom-20 opacity-80"
+        ></Image>
+        <Image
+          src={construction.src}
+          unoptimized
+          alt="mePointBook.jpg"
+          width={200}
+          height={200}
+          className="absolute top-20 opacity-80"
+        ></Image>
         <div className="text-lg text-black lg:text-xl">Guest Book~</div>
       </a>
     </div>

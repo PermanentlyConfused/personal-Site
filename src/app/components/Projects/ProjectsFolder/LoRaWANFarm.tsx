@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
-import kr260 from "@/assets/Projects/FPGAHand/kr260.png";
 import architecture from "@/assets/Projects/LoRaSmartFarm/highlevelArch.png";
+import singlePCB from "@/assets/Projects/LoRaSmartFarm/singular.png";
+import solderedPCB from "@/assets/Projects/LoRaSmartFarm/both.png";
+import gateway from "@/assets/Projects/LoRaSmartFarm/Gateway.png";
 
 const LoRaWANFarm: React.FC = () => {
   return (
@@ -27,14 +29,14 @@ const LoRaWANFarm: React.FC = () => {
         </div>
         <div className="flex flex-col items-center pt-4 lg:w-[40%]">
           <Image
-            src={kr260.src}
+            src={singlePCB.src}
             alt="CustomPCBs"
-            width={200}
-            height={200}
+            width={400}
+            height={400}
           ></Image>
           <p className="text-center text-base">
             {" "}
-            Picture 1: Custom PCB with Seeed's Wio-E5 & Sensors
+            Picture 1: Custom PCB with Seeed's Wio-E5
           </p>
         </div>
       </div>
@@ -68,7 +70,7 @@ const LoRaWANFarm: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row">
-        <div className="flex flex-col lg:pl-4">
+        <div className="flex flex-col lg:w-[60%] lg:pl-4">
           <h1 className="text-2xl">LoRa End Nodes:</h1>
           <p className="text-left text-base">
             This component of the design is composed of LoRa devices (IoT nodes)
@@ -81,9 +83,30 @@ const LoRaWANFarm: React.FC = () => {
             forwarding protocol.
           </p>
         </div>
+        <div className="flex flex-col items-center lg:w-[40%]">
+          <Image
+            src={solderedPCB.src}
+            alt="CustomPCBs"
+            width={300}
+            height={300}
+          ></Image>
+          <p className="text-center text-base">
+            Picture 3: Finalized Custom LoRa End Nodes.
+          </p>
+        </div>
       </div>
+
       <div className="flex flex-col lg:flex-row">
-        <div className="flex flex-col lg:pl-4">
+        <div className="flex flex-col items-center lg:w-[35%] lg:pt-2">
+          <Image
+            src={gateway.src}
+            alt="CustomPCBs"
+            width={300}
+            height={300}
+          ></Image>
+          <p className="text-center text-base">Picture 3: Seeed M2 Gateway.</p>
+        </div>
+        <div className="flex flex-col lg:w-[65%] lg:pl-4">
           <h1 className="text-2xl">Server Component:</h1>
           <p className="text-left text-base">
             The first point of contact from the LoRaWAN Gateway to the server
@@ -108,6 +131,8 @@ const LoRaWANFarm: React.FC = () => {
             calls to the Server component to show and visualize sensor data,
             manage LoRa Devices(battery, signal strength), and alerts the users
             of important events.
+            <br></br>
+            <b>Currently WIP :D</b>
           </p>
         </div>
       </div>
