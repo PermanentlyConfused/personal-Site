@@ -11,7 +11,7 @@ const OpenPDFButton: React.FC = () => {
 
   return (
     <button
-      className="cursor-pointer text-white hover:text-blue-900"
+      className="cursor-pointer text-black hover:text-blue-900"
       onClick={openPDF}
     >
       Click to show PDF of full design
@@ -20,10 +20,10 @@ const OpenPDFButton: React.FC = () => {
 };
 const FPGAHandProject: React.FC = () => {
   return (
-    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:px-5 lg:py-10 lg:text-3xl lg:text-white">
+    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:px-5 lg:py-10 lg:text-3xl">
       {/* First row*/}
       <div className="flex flex-col lg:flex-row lg:justify-center">
-        <div className="flex flex-col lg:w-[60%] lg:px-4">
+        <div className="flex flex-col lg:w-[55%] lg:px-4">
           <h1 className="font-bold">AI Enabled FPGA-based Robotic Hand</h1>
           <p className="text-base">
             This project presents an AI-powered robotic hand system capable of
@@ -41,7 +41,7 @@ const FPGAHandProject: React.FC = () => {
             automation application.
           </p>
         </div>
-        <div className="flex flex-col items-center pt-4 lg:w-[40%]">
+        <div className="flex flex-col items-center lg:w-[45%]">
           <Image
             src={kr260.src}
             alt="asdasdasd"
@@ -70,7 +70,7 @@ const FPGAHandProject: React.FC = () => {
       </div>
       {/* Row3 */}
       <div className="flex flex-col lg:flex-row lg:justify-center">
-        <div className="llg:pl-4 flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center lg:pl-4">
           <Image
             src={pipeline.src}
             alt="perlin noise 1D plot"

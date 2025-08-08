@@ -5,13 +5,14 @@ import perlinNoise from "@/assets/Projects/Boids/PerlinNoise1D.png";
 import boidsSped from "@/assets/Projects/Boids/BoidsSped.gif";
 const BoidsProj: React.FC = () => {
   return (
-    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:px-5 lg:py-10 lg:text-3xl lg:text-white">
+    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:px-5 lg:py-10 lg:text-3xl">
       {/* First row*/}
       <div className="flex flex-col lg:flex-row lg:justify-center">
         <div className="flex flex-col lg:w-[60%] lg:px-4">
           <h1 className="font-bold">
             Boids Simulation on Procedurally Generated World
           </h1>
+          <h1 className="text-2xl">Introduction:</h1>
           <p className="text-semibold text-base">
             This project started off as "Can I build Minecraft from scratch?". I
             found out very quickly that the short answer was "No" as there were
@@ -26,7 +27,7 @@ const BoidsProj: React.FC = () => {
             with the world.
           </p>
         </div>
-        <div className="flex flex-col items-center pt-4 lg:w-[40%]">
+        <div className="flex flex-col items-center lg:w-[40%]">
           <Image
             src={worldGeneration.src}
             alt="GenerationSped gif"
