@@ -86,7 +86,7 @@ const ProjectMain: React.FC = () => {
                   <div
                     key={idx}
                     onClick={() => setExpanded(idx)}
-                    className={`w- h-70 cursor-pointer gap-y-10 text-center transition ${positionClasses[idx]}`}
+                    className={`h-60 w-90 cursor-pointer gap-y-10 text-center transition ${positionClasses[idx]}`}
                   >
                     {idx == 0 && (
                       <motion.div
@@ -105,7 +105,7 @@ const ProjectMain: React.FC = () => {
                         <span className="mb-2 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-0:text-white">
                           LoRaWAN-based Smart Farm
                         </span>
-                        <div className="img-tape img-tape--4">
+                        <div className="img-tape img-tape--4 -top-10">
                           <Image
                             src={LoRa.src}
                             height={100}
@@ -135,7 +135,7 @@ const ProjectMain: React.FC = () => {
                         <span className="mb-2 px-5 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white">
                           AI Enabled FPGA-based Robotic Hand
                         </span>
-                        <div className="img-tape img-tape--4">
+                        <div className="img-tape img-tape--4 -top-10">
                           <Image
                             src={Xilinx.src}
                             height={200}
