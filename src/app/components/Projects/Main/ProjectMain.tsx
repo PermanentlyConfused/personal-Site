@@ -3,12 +3,16 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import FPGAHandProject from "../ProjectsFolder/FPGAHandProject";
 import BoidsProj from "../ProjectsFolder/Boids";
 import LoRaWANFarm from "../ProjectsFolder/LoRaWANFarm";
 import "@/app/CustomCSS/PinNTape.css";
 
 import LoRa from "@/assets/Projects/LoRaSmartFarm/thumbnail.png";
+import Boids from "@/assets/Projects/Boids/BoidsThumbNail.png";
+import Xilinx from "@/assets/Projects/FPGAHand/Xilinx.png";
+import { Lora } from "next/font/google";
 
 const ProjectMain: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
@@ -94,13 +98,22 @@ const ProjectMain: React.FC = () => {
                           delay: 0,
                           ease: "easeInOut",
                         }}
-                        className="group/project-0 flex h-full w-full items-end justify-center bg-[url('@/assets/Projects/LoRaSmartFarm/thumbnail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
+                        className="group/project-0 flex h-full w-full flex-row items-center justify-evenly bg-[#e5cbba]/80 bg-cover bg-center px-5 bg-blend-soft-light hover:bg-gray-800"
                         style={{}}
                       >
-                        <div className="img-tape img-tape--1 bottom-75 left-15" />
-                        <span className="mb-2 px-5 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-0:-translate-y-30 group-hover/project-0:text-white">
+                        {/* <div className="img-tape img-tape--1 bottom-46 left-35" /> */}
+                        <span className="mb-2 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-0:text-white">
                           LoRaWAN-based Smart Farm
                         </span>
+                        <div className="img-tape img-tape--4">
+                          <Image
+                            src={LoRa.src}
+                            height={100}
+                            width={200}
+                            alt="LoRa Thumbnail"
+                            className="rounded-xl border-0 border-black bg-white"
+                          />
+                        </div>
                       </motion.div>
                     )}
                     {idx == 1 && (
@@ -116,12 +129,21 @@ const ProjectMain: React.FC = () => {
                         style={{
                           alignSelf: idx % 2 === 1 ? "flex-start" : "flex-end",
                         }}
-                        className="group/project-1 flex h-full w-full items-end justify-center bg-[url('@/assets/Projects/FPGAHand/Xilinx.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-900"
+                        className="group/project-1 flex h-full w-full flex-row items-center justify-evenly bg-[#e5cbba]/80 bg-cover bg-center px-5 bg-blend-soft-light hover:bg-gray-800"
                       >
-                        <div className="img-tape img-tape--1 bottom-75 left-25" />
-                        <span className="mb-2 px-5 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-1:-translate-y-30 group-hover/project-1:text-white">
+                        {/* <div className="img-tape img-tape--1 bottom-46 left-35" /> */}
+                        <span className="mb-2 px-5 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white">
                           AI Enabled FPGA-based Robotic Hand
                         </span>
+                        <div className="img-tape img-tape--4">
+                          <Image
+                            src={Xilinx.src}
+                            height={200}
+                            width={300}
+                            alt="Xilinx Logo"
+                            className="rounded-xl border-2 border-black"
+                          />
+                        </div>
                       </motion.div>
                     )}
                     {idx == 2 && (
@@ -139,8 +161,8 @@ const ProjectMain: React.FC = () => {
                         }}
                         className="group/project-2 flex h-full w-full items-end justify-center bg-[url('@/assets/Projects/Fingerprint/fingerprintThumbnail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
                       >
-                        <div className="img-tape img-tape--1 bottom-75 left-40" />
-                        <span className="mb-2 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-2:-translate-y-25 group-hover/project-2:text-white">
+                        {/* <div className="img-tape img-tape--1 bottom-75 left-40" /> */}
+                        <span className="mb-2 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-2:text-white">
                           FPGA-based Children Fingerprint Sensor and
                           Authentication system
                         </span>
@@ -161,8 +183,8 @@ const ProjectMain: React.FC = () => {
                         }}
                         className="group/project-3 flex h-full w-full items-end justify-center bg-[url('@/assets/Projects/Boids/BoidsThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
                       >
-                        <div className="img-tape img-tape--1 bottom-75 left-30" />
-                        <span className="mb-2 px-5 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-3:-translate-y-25 group-hover/project-3:text-white">
+                        {/* <div className="img-tape img-tape--1 bottom-75 left-30" /> */}
+                        <span className="mb-2 px-5 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-3:text-white">
                           Boids Simulation on Procedural Generated World
                         </span>
                       </motion.div>

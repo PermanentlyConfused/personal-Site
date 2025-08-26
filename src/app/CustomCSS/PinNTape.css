@@ -78,6 +78,19 @@
     transform: rotate(-45deg);
   }
 }
+
+.img-tape--4 {
+  &:before {
+    width: 60px;
+    height: 20px;
+    top: -10px;
+    right: 35%;
+  }
+
+  &:after {
+    display: none;
+  }
+}
 .box-1 {
   box-shadow: 4px 4px 0 0 rgba(229, 203, 186, 0.8);
   background-color: #f6eee3;
