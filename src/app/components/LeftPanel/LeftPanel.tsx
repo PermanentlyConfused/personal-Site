@@ -31,7 +31,7 @@ const LeftPanel: React.FC = () => {
             }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
-            className="pin hidden lg:block"
+            className="pin hidden lg:-top-[16px] lg:block"
           ></motion.i>
           <h1 className="text-4xl text-slate-900 sm:text-5xl">Art Nguyen</h1>
           <h1 className="mt-3 text-lg tracking-tight text-slate-900 sm:text-xl">

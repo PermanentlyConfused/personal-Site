@@ -1,8 +1,9 @@
 import Footer from "../Footer/Footer";
-
+import Header from "../Header/Header";
 const AboutMe: React.FC = () => {
   return (
     <div className="homeBG flex flex-col items-center gap-10">
+      <Header />
       {/* <div className="absolute h-40 w-full   -rotate-2 bg-black"></div> */}
       <div className="flex flex-col items-center justify-center gap-5 lg:mx-60 lg:flex-row">
         <div className="h-100 bg-white text-black lg:w-[25%]">

@@ -20,7 +20,7 @@ const OpenPDFButton: React.FC = () => {
 };
 const FPGAHandProject: React.FC = () => {
   return (
-    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:px-5 lg:py-10 lg:text-3xl">
+    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 py-10 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:text-3xl">
       {/* First row*/}
       <div className="flex flex-col lg:flex-row lg:justify-center">
         <div className="flex flex-col lg:w-[55%] lg:px-4">

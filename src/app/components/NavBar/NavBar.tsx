@@ -37,7 +37,8 @@ const NavBar: React.FC = () => {
       </a>
 
       <a
-        onClick={() => scrollToSection("topRight")}
+        // onClick={() => scrollToSection("topRight")}
+        href="/bookmarks"
         className="flex aspect-square w-40 -rotate-2 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:w-full lg:shadow-xl"
       >
         {" "}

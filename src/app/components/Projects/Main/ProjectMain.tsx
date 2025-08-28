@@ -10,9 +10,9 @@ import LoRaWANFarm from "../ProjectsFolder/LoRaWANFarm";
 import "@/app/CustomCSS/PinNTape.css";
 
 import LoRa from "@/assets/Projects/LoRaSmartFarm/thumbnail.png";
-import Boids from "@/assets/Projects/Boids/BoidsThumbNail.png";
 import Xilinx from "@/assets/Projects/FPGAHand/Xilinx.png";
-import { Lora } from "next/font/google";
+import Boids from "@/assets/Projects/Boids/BoidsThumbNail.png";
+import Fingerprint from "@/assets/Projects/Fingerprint/fingerprintThumbnail.png";
 
 const ProjectMain: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
@@ -29,9 +29,9 @@ const ProjectMain: React.FC = () => {
   }, []);
 
   return (
-    <div className="hidden lg:block">
-      <div className="group duration:500 relative mt-5 flex h-auto w-auto flex-col items-center justify-center">
-        <h1 className="mb-10 bg-linear-to-r from-[#eee7d7]/0 to-[#e5cbba]/100 px-10 py-3 text-center text-5xl font-semibold text-black drop-shadow-lg">
+    <div className="">
+      <div className="group relative mt-5 flex h-auto w-auto flex-col items-center justify-center">
+        <h1 className="mb-10 bg-linear-to-r from-[#eee7d7]/0 to-[#e5cbba]/100 px-5 py-2 text-center text-3xl font-semibold text-black drop-shadow-lg xl:px-10 xl:py-3 xl:text-5xl">
           Projects I Worked On
         </h1>
 
@@ -44,10 +44,10 @@ const ProjectMain: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="mt-5 h-[30%] w-[70%] overflow-y-scroll rounded-lg bg-[#f6eee3]"
+              className="mt-5 overflow-y-scroll rounded-lg bg-[#f6eee3] lg:h-[30%] lg:w-[70%] xl:pt-0"
               onClick={() => setExpanded(null)}
             >
-              <div className="pin mt-33" />
+              <div className="pin bot-20" />
               {expanded == 0 && <LoRaWANFarm />}
               {expanded == 1 && <FPGAHandProject />}
               {expanded == 2 && (
@@ -72,40 +72,40 @@ const ProjectMain: React.FC = () => {
                 duration: 0.2,
                 delay: hasAnimated ? 0 : 0.2,
               }}
-              className="grid grid-cols-3 grid-rows-3 items-center justify-center gap-10 rounded-lg px-10 py-10"
+              className="flex-col flex-wrap justify-items-center rounded-lg lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-2 lg:gap-x-5 lg:px-30 lg:py-10"
             >
               {boxes.map((_, idx) => {
                 let positionClasses = [];
 
                 if (idx === 0) positionClasses[0] = "col-start-1 row-start-1"; // box1
-                if (idx === 1) positionClasses[1] = "col-start-1 row-start-3"; // box2
-                if (idx === 2) positionClasses[2] = "col-start-2 row-start-2"; // box3
-                if (idx === 3) positionClasses[3] = "col-start-3 row-start-1"; // box4
-                if (idx === 4) positionClasses[4] = "col-start-3 row-start-3"; // box5
+                if (idx === 1) positionClasses[1] = "col-start-1 row-start-2"; // box2
+                if (idx === 2) positionClasses[2] = "col-start-1 row-start-3"; // box3
+                if (idx === 3) positionClasses[3] = "col-start-2 row-start-1"; // box4
+                if (idx === 4) positionClasses[4] = "col-start-2 row-start-2"; // box5
+                if (idx === 4) positionClasses[4] = "col-start-2 row-start-2"; // box6
                 return (
                   <div
                     key={idx}
                     onClick={() => setExpanded(idx)}
-                    className={`w- h-70 cursor-pointer gap-y-10 text-center transition ${positionClasses[idx]}`}
+                    className={`mb-5 h-[80%] w-[90%] cursor-pointer text-center transition lg:mb-0 ${positionClasses[idx]}`}
                   >
                     {idx == 0 && (
                       <motion.div
                         whileHover={{
-                          boxShadow: "0px 0px 19px 2px rgba(0,0,0,0.2)",
+                          boxShadow: "0px 0px 19px 4px rgba(0,0,0,0.2)",
                         }}
                         transition={{
                           duration: 0.5,
                           delay: 0,
                           ease: "easeInOut",
                         }}
-                        className="group/project-0 flex h-full w-full flex-row items-center justify-evenly bg-[#e5cbba]/80 bg-cover bg-center px-5 bg-blend-soft-light hover:bg-gray-800"
-                        style={{}}
+                        className="group/project-0 flex h-full w-full flex-row items-center justify-evenly gap-x-5 rounded-xl border-1 border-black bg-white/80 bg-cover bg-center px-5 bg-blend-soft-light hover:bg-gray-800 lg:gap-x-10"
                       >
                         {/* <div className="img-tape img-tape--1 bottom-46 left-35" /> */}
-                        <span className="mb-2 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-0:text-white">
+                        <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-0:text-white lg:text-2xl">
                           LoRaWAN-based Smart Farm
                         </span>
-                        <div className="img-tape img-tape--4">
+                        <div className="img-tape img-tape--4 -top-5">
                           <Image
                             src={LoRa.src}
                             height={100}
@@ -129,19 +129,19 @@ const ProjectMain: React.FC = () => {
                         style={{
                           alignSelf: idx % 2 === 1 ? "flex-start" : "flex-end",
                         }}
-                        className="group/project-1 flex h-full w-full flex-row items-center justify-evenly bg-[#e5cbba]/80 bg-cover bg-center px-5 bg-blend-soft-light hover:bg-gray-800"
+                        className="group/project-1 flex h-full w-full flex-row items-center justify-evenly gap-5 rounded-xl border-1 border-black bg-white/80 bg-cover bg-center p-5 px-5 bg-blend-soft-light hover:bg-gray-800 lg:gap-x-3"
                       >
                         {/* <div className="img-tape img-tape--1 bottom-46 left-35" /> */}
-                        <span className="mb-2 px-5 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white">
+                        <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white lg:text-2xl">
                           AI Enabled FPGA-based Robotic Hand
                         </span>
-                        <div className="img-tape img-tape--4">
+                        <div className="img-tape img-tape--4 -top-5">
                           <Image
                             src={Xilinx.src}
                             height={200}
                             width={300}
                             alt="Xilinx Logo"
-                            className="rounded-xl border-2 border-black"
+                            className="rounded-xl border-1 border-black"
                           />
                         </div>
                       </motion.div>
@@ -159,13 +159,22 @@ const ProjectMain: React.FC = () => {
                         style={{
                           alignSelf: idx % 2 === 1 ? "flex-start" : "flex-end",
                         }}
-                        className="group/project-2 flex h-full w-full items-end justify-center bg-[url('@/assets/Projects/Fingerprint/fingerprintThumbnail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
+                        className="group/project-2 flex h-full w-full flex-row items-center justify-evenly gap-5 rounded-xl border-1 border-black bg-white/80 bg-cover bg-center p-5 px-5 bg-blend-soft-light hover:bg-gray-800 lg:gap-x-3"
                       >
                         {/* <div className="img-tape img-tape--1 bottom-75 left-40" /> */}
-                        <span className="mb-2 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-2:text-white">
+                        <span className="text-xl font-semibold text-black transition-colors duration-300 group-hover/project-2:text-white lg:text-2xl">
                           FPGA-based Children Fingerprint Sensor and
                           Authentication system
                         </span>
+                        <div className="img-tape img-tape--4 -top-5">
+                          <Image
+                            src={Fingerprint.src}
+                            height={200}
+                            width={300}
+                            alt="Fingerprint Logo"
+                            className="rounded-xl border-1 border-black"
+                          />
+                        </div>
                       </motion.div>
                     )}
                     {idx == 3 && (
@@ -181,16 +190,25 @@ const ProjectMain: React.FC = () => {
                         style={{
                           alignSelf: idx % 2 === 1 ? "flex-start" : "flex-end",
                         }}
-                        className="group/project-3 flex h-full w-full items-end justify-center bg-[url('@/assets/Projects/Boids/BoidsThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800"
+                        className="group/project-3 flex h-full w-full flex-row items-center justify-evenly gap-5 rounded-xl border-1 border-black bg-white/80 bg-cover bg-center p-5 px-5 bg-blend-soft-light hover:bg-gray-800 lg:gap-x-3"
                       >
                         {/* <div className="img-tape img-tape--1 bottom-75 left-30" /> */}
-                        <span className="mb-2 px-5 text-2xl font-semibold text-black transition-colors duration-300 group-hover/project-3:text-white">
+                        <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-3:text-white lg:text-2xl">
                           Boids Simulation on Procedural Generated World
                         </span>
+                        <div className="img-tape img-tape--4 -top-5">
+                          <Image
+                            src={Boids.src}
+                            height={200}
+                            width={300}
+                            alt="Boids thumbnail"
+                            className="rounded-xl border-1 border-black"
+                          />
+                        </div>
                       </motion.div>
                     )}
                     {/* {idx == 3 && (
-                      <div className="group/project-1 flex h-full w-full items-end justify-center bg-[url('@/assets/Projects/NagUTron/ThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800">
+                      <div className="group/project-1 flex h-full w-full items-end justify-evenly bg-[url('@/assets/Projects/NagUTron/ThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800">
                         <span className="mb-7 font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white">
                           Nag-U-Tron
                         </span>

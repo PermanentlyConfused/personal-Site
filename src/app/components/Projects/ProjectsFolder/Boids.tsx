@@ -5,7 +5,7 @@ import perlinNoise from "@/assets/Projects/Boids/PerlinNoise1D.png";
 import boidsSped from "@/assets/Projects/Boids/BoidsSped.gif";
 const BoidsProj: React.FC = () => {
   return (
-    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:px-5 lg:py-10 lg:text-3xl">
+    <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 py-10 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:text-3xl">
       {/* First row*/}
       <div className="flex flex-col lg:flex-row lg:justify-center">
         <div className="flex flex-col lg:w-[60%] lg:px-4">

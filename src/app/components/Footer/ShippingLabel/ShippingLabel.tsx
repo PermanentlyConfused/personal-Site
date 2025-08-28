@@ -18,23 +18,23 @@ const ShippingLabel: React.FC<ShippingLabelProps> = ({
 
   return (
     <motion.header
-      initial={{ opacity: 0, x: -1000 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 1000 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.8,
         delay: 0,
         ease: [0, 0.71, 0.2, 1.01],
       }}
-      className="mx-auto flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[40%] lg:flex-col lg:justify-between lg:py-15"
+      className="mx-auto flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[40%] lg:flex-col lg:py-5"
     >
       <div
         className={
           colorVariation
-            ? "border-3 border-dashed border-black bg-[#e5cbba] p-[0.3em] lg:rotate-3"
-            : "border-3 border-dashed border-black bg-[#8ec5ff] p-[0.3em] lg:rotate-3"
+            ? "border-3 border-dashed border-black bg-[#e5cbba] p-[0.2em] lg:-rotate-1"
+            : "border-3 border-dashed border-black bg-[#8ec5ff] p-[0.2em] lg:-rotate-1"
         }
       >
-        <div className="shippingCardBG h-[100%] w-[100%] p-[1.5em]">
+        <div className="shippingCardBG h-[100%] w-[100%] p-[1em]">
           {title}
           <br></br>
           {content}

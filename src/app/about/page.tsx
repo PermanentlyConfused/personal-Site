@@ -1,8 +1,7 @@
 import AboutMe from "../components/AboutMe/AboutMe";
 export default function AboutMainPage() {
   return (
-    <div>
-      {" "}
+    <div className="lg:mx-20">
       <AboutMe />
     </div>
   );
