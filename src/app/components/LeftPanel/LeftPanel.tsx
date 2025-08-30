@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { FaGithub, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaSteam } from "react-icons/fa";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { IconContext } from "react-icons";
 import Snortlax from "@/assets/Snortlax.png";
@@ -69,11 +70,18 @@ const LeftPanel: React.FC = () => {
                 <FaGithub className="text-black transition-colors duration-300 hover:text-blue-500" />
               </a>
               <a
-                href="https://www.instagram.com/artokusu/"
+                href="https://www.instagram.com/artokusu_/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagram className="text-black transition-colors duration-300 hover:text-pink-500" />
+              </a>
+              <a
+                href="https://steamcommunity.com/id/Gamergamergamerx3/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaSteam className="text-black transition-colors duration-300 hover:text-[#1b2838]" />
               </a>
             </div>
           </IconContext.Provider>

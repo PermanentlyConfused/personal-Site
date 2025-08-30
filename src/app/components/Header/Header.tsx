@@ -22,7 +22,12 @@ const Header: React.FC = () => {
         className="group/home flex text-black lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[25%] lg:flex-col lg:py-5"
         href="/"
       >
-        <div className="pin top-[10px] hidden lg:block" />
+        <motion.div
+          initial={{ y: -1000 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1, delay: 0.25 }}
+          className="pin top-[10px] hidden lg:block"
+        />
         <div
           className={
             "border-3 border-dashed border-black bg-[#154D71] p-[0.3em] group-hover/home:bg-white lg:rotate-1"
@@ -48,7 +53,12 @@ const Header: React.FC = () => {
         className="group/about flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[25%] lg:flex-col lg:py-5"
         href="/about"
       >
-        <div className="pin top-[10px] hidden lg:block" />
+        <motion.div
+          initial={{ y: -1000 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="pin top-[10px] hidden lg:block"
+        />
         <div
           className={
             "border-3 border-dashed border-black bg-[#1C6EA4] p-[0.3em] group-hover/about:bg-white lg:rotate-2"
@@ -74,7 +84,12 @@ const Header: React.FC = () => {
         className="group/bookmarks flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[25%] lg:flex-col lg:py-5"
         href="/bookmarks"
       >
-        <div className="pin top-[10px] hidden lg:block" />
+        <motion.div
+          initial={{ y: -1000 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="pin top-[10px] hidden lg:block"
+        />
         <div
           className={
             "border-3 border-dashed border-black bg-[#33A1E0] p-[0.3em] group-hover/bookmarks:bg-white lg:rotate-3"
@@ -100,7 +115,12 @@ const Header: React.FC = () => {
         className="group/projects flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[25%] lg:flex-col lg:py-5"
         href="/projects"
       >
-        <div className="pin top-[10px] hidden lg:block" />
+        <motion.div
+          initial={{ y: -1000 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="pin top-[10px] hidden lg:block"
+        />
         <div
           className={
             "border-3 border-dashed border-black bg-[#FFF9AF] p-[0.3em] group-hover/projects:bg-white lg:rotate-4"

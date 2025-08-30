@@ -7,18 +7,20 @@ import Image from "next/image";
 import FPGAHandProject from "../ProjectsFolder/FPGAHandProject";
 import BoidsProj from "../ProjectsFolder/Boids";
 import LoRaWANFarm from "../ProjectsFolder/LoRaWANFarm";
+import AutowareProj from "../ProjectsFolder/Autoware";
 import "@/app/CustomCSS/PinNTape.css";
 
 import LoRa from "@/assets/Projects/LoRaSmartFarm/thumbnail.png";
 import Xilinx from "@/assets/Projects/FPGAHand/Xilinx.png";
 import Boids from "@/assets/Projects/Boids/BoidsThumbNail.png";
 import Fingerprint from "@/assets/Projects/Fingerprint/fingerprintThumbnail.png";
+import Autoware from "@/assets/Projects/Autoware/autowareLogo.png";
 
 const ProjectMain: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
   const [showBoxes, setShowBoxes] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const boxes = [1, 2, 3, 4];
+  const boxes = [1, 2, 3, 4, 5];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,7 +34,7 @@ const ProjectMain: React.FC = () => {
     <div className="">
       <div className="group relative mt-5 flex h-auto w-auto flex-col items-center justify-center">
         <h1 className="mb-10 bg-linear-to-r from-[#eee7d7]/0 to-[#e5cbba]/100 px-5 py-2 text-center text-3xl font-semibold text-black drop-shadow-lg xl:px-10 xl:py-3 xl:text-5xl">
-          Projects I Worked On
+          Some Projects I Worked On
         </h1>
 
         {/* Expanded Box */}
@@ -57,6 +59,7 @@ const ProjectMain: React.FC = () => {
                 </div>
               )}
               {expanded == 3 && <BoidsProj />}
+              {expanded == 3 && <AutowareProj />}
             </motion.div>
           )}
         </AnimatePresence>
@@ -82,7 +85,7 @@ const ProjectMain: React.FC = () => {
                 if (idx === 2) positionClasses[2] = "col-start-1 row-start-3"; // box3
                 if (idx === 3) positionClasses[3] = "col-start-2 row-start-1"; // box4
                 if (idx === 4) positionClasses[4] = "col-start-2 row-start-2"; // box5
-                if (idx === 4) positionClasses[4] = "col-start-2 row-start-2"; // box6
+                if (idx === 5) positionClasses[5] = "col-start-2 row-start-3"; // box6
                 return (
                   <div
                     key={idx}
@@ -108,7 +111,7 @@ const ProjectMain: React.FC = () => {
                         <div className="img-tape img-tape--4 -top-5">
                           <Image
                             src={LoRa.src}
-                            height={100}
+                            height={200}
                             width={200}
                             alt="LoRa Thumbnail"
                             className="rounded-xl border-0 border-black bg-white"
@@ -138,7 +141,7 @@ const ProjectMain: React.FC = () => {
                         <div className="img-tape img-tape--4 -top-5">
                           <Image
                             src={Xilinx.src}
-                            height={200}
+                            height={300}
                             width={300}
                             alt="Xilinx Logo"
                             className="rounded-xl border-1 border-black"
@@ -169,7 +172,7 @@ const ProjectMain: React.FC = () => {
                         <div className="img-tape img-tape--4 -top-5">
                           <Image
                             src={Fingerprint.src}
-                            height={200}
+                            height={300}
                             width={300}
                             alt="Fingerprint Logo"
                             className="rounded-xl border-1 border-black"
@@ -199,7 +202,7 @@ const ProjectMain: React.FC = () => {
                         <div className="img-tape img-tape--4 -top-5">
                           <Image
                             src={Boids.src}
-                            height={200}
+                            height={300}
                             width={300}
                             alt="Boids thumbnail"
                             className="rounded-xl border-1 border-black"
@@ -207,13 +210,35 @@ const ProjectMain: React.FC = () => {
                         </div>
                       </motion.div>
                     )}
-                    {/* {idx == 3 && (
-                      <div className="group/project-1 flex h-full w-full items-end justify-evenly bg-[url('@/assets/Projects/NagUTron/ThumbNail.png')] bg-cover bg-center bg-blend-soft-light hover:bg-gray-800">
-                        <span className="mb-7 font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white">
-                          Nag-U-Tron
+                    {idx == 4 && (
+                      <motion.div
+                        whileHover={{
+                          boxShadow: "0px 0px 19px 2px rgba(0,0,0,0.2)",
+                        }}
+                        transition={{
+                          duration: 0.5,
+                          delay: 0,
+                          ease: "easeInOut",
+                        }}
+                        style={{
+                          alignSelf: idx % 2 === 1 ? "flex-start" : "flex-end",
+                        }}
+                        className="group/project-4 flex h-full w-full flex-row items-center justify-evenly gap-5 rounded-xl border-1 border-black bg-white/80 bg-cover bg-center p-5 px-5 bg-blend-soft-light hover:bg-gray-800 lg:gap-x-3"
+                      >
+                        <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-4:text-white lg:text-2xl">
+                          3D Autonomous Driving with AgileX Scout 2.0
                         </span>
-                      </div>
-                    )} */}
+                        <div className="img-tape img-tape--4 -top-5">
+                          <Image
+                            src={Autoware.src}
+                            height={300}
+                            width={300}
+                            alt="Boids thumbnail"
+                            className="rounded-xl border-1 border-black"
+                          />
+                        </div>
+                      </motion.div>
+                    )}
                   </div>
                 );
               })}

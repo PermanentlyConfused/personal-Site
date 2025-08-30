@@ -1,5 +1,4 @@
 import ProjectMain from "@/app/components/Projects/Main/ProjectMain";
-import ProjectNotePad from "@/app/components/Projects/ProjectNotePad.tsx/ProjectNotePad";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 export default function AboutMainPage() {
