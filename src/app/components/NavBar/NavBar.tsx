@@ -76,15 +76,15 @@ const NavBar: React.FC = () => {
         <Image
           src={construction.src}
           unoptimized
-          alt="mePointBook.jpg"
-          width={200}
-          height={200}
+          alt="constructiontape.jpg"
+          width={210}
+          height={210}
           className="absolute bottom-20 opacity-80"
         ></Image>
         <Image
           src={construction.src}
           unoptimized
-          alt="mePointBook.jpg"
+          alt="constructiontape.jpg"
           width={200}
           height={200}
           className="absolute top-20 opacity-80"
@@ -101,7 +101,7 @@ const NavBar: React.FC = () => {
         <Image
           src={construction.src}
           unoptimized
-          alt="mePointBook.jpg"
+          alt="constructiontape.jpg"
           width={200}
           height={200}
           className="absolute bottom-20 opacity-80"
@@ -109,7 +109,7 @@ const NavBar: React.FC = () => {
         <Image
           src={construction.src}
           unoptimized
-          alt="mePointBook.jpg"
+          alt="constructiontape.jpg"
           width={200}
           height={200}
           className="absolute top-20 opacity-80"

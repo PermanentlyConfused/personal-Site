@@ -80,7 +80,7 @@ const ProjectMain: React.FC = () => {
                       <div
                         key={idx}
                         onClick={() => setExpanded(idx)}
-                        className="embla__slide"
+                        className="embla__slide rounded-2xl"
                       >
                         {idx == 0 && (
                           <div className="embla__slide__content flex flex-col gap-10 rounded-2xl px-10 text-center text-black">
@@ -121,7 +121,7 @@ const ProjectMain: React.FC = () => {
                             {/* <div className="img-tape img-tape--1 bottom-75 left-40" /> */}
                             <span className="text-xl font-semibold text-black transition-colors duration-300 group-hover/project-2:text-white lg:text-2xl">
                               FPGA-based Children Fingerprint Sensor and
-                              Authentication system
+                              Authenticator
                             </span>
                             <div className="img-tape img-tape--4 -top-5 hidden md:block">
                               <Image

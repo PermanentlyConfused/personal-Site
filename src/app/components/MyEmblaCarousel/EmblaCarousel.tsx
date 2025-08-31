@@ -49,7 +49,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         {slides}
       </div>
 
-      <div className="embla__controls grid grid-cols-3 justify-items-center lg:grid-rows-3 lg:px-10">
+      <div className="embla__controls grid grid-cols-3 justify-items-center lg:grid-cols-3 lg:grid-rows-1 lg:px-10">
         <div className="embla__buttons col-start-2 row-start-2 lg:col-start-1 lg:row-start-1">
           <PrevButton
             onClick={() => onAutoplayButtonClick(onPrevButtonClick)}
