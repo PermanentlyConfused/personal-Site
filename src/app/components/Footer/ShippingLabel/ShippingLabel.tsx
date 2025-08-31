@@ -14,8 +14,6 @@ const ShippingLabel: React.FC<ShippingLabelProps> = ({
   title,
   content,
 }) => {
-  const border = ``;
-
   return (
     <motion.header
       initial={{ opacity: 0, y: 1000 }}

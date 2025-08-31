@@ -4,7 +4,7 @@ const MyBookMarks: React.FC = () => {
   return (
     <div className="flex flex-col py-20 lg:mx-auto">
       <div className="flex flex-col flex-wrap items-center justify-center gap-y-20 lg:flex-row lg:gap-x-20">
-        <div className="blokken flex h-[770px] w-[620px] flex-col rounded-r-xl pl-3 text-left text-black">
+        <div className="blokken flex h-[48rem] w-[38rem] flex-col rounded-r-xl pl-3 text-sm text-black">
           <div className="img-tape img-tape--2-alt -top-15"></div>
           <h1 className="text-3xl font-semibold">Front-end Stuff</h1>
           <p className="text-2xl">

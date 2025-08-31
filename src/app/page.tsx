@@ -1,48 +1,11 @@
 "use client";
 import { useEffect } from "react";
 
-import DoodleBackgrounds from "./components/DoodleBackgrounds/DoodleBackgrounds";
+//import DoodleBackgrounds from "./components/DoodleBackgrounds/DoodleBackgrounds";
 import LeftPanel from "@/app/components/LeftPanel/LeftPanel";
 import NavBar from "@/app/components/NavBar/NavBar";
 
 export default function Home() {
-  // useEffect(() => {
-  //   const handler = (e: KeyboardEvent) => {
-  //     if (
-  //       (e.ctrlKey || e.metaKey) &&
-  //       (e.key === "+" || e.key === "-" || e.key === "=" || e.key === "0")
-  //     ) {
-  //       e.preventDefault();
-  //     }
-  //   };
-
-  //   const wheelHandler = (e: WheelEvent) => {
-  //     if (e.ctrlKey) {
-  //       e.preventDefault();
-  //     }
-  //   };
-
-  //   window.addEventListener("keydown", handler, { passive: false });
-  //   window.addEventListener("wheel", wheelHandler, { passive: false });
-
-  //   return () => {
-  //     window.removeEventListener("keydown", handler);
-  //     window.removeEventListener("wheel", wheelHandler);
-  //   };
-  // }, []);
-  // //Override default scrolling
-  // const handleWheel = (e: MouseEvent) => {
-  //   e.preventDefault();
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("wheel", handleWheel, { passive: false });
-  //   return () => {
-  //     window.removeEventListener("wheel", handleWheel);
-  //   };
-  // }, []);
-
-  //Focuses on specified div on start
   useEffect(() => {
     const target = document.getElementById("home"); //home,topRight
     if (target) {

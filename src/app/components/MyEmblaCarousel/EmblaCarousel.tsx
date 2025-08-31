@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { ReactNode, useRef } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -12,15 +12,16 @@ import {
 } from "./EmblaCarouselArrowButtons";
 
 type PropType = {
-  slides: number[];
+  slides: ReactNode;
   options?: EmblaOptionsType;
 };
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const progressNode = useRef<HTMLDivElement>(null);
+
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ playOnInit: true, delay: 3000 }),
+    Autoplay({ playOnInit: false, delay: 3000 }),
   ]);
 
   const {
@@ -36,20 +37,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { showAutoplayProgress } = useAutoplayProgress(emblaApi, progressNode);
 
   return (
-    <div className="embla">
+    <div className="embla lg:max-w-[80vw] lg:px-40">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {slides.map((index) => (
+        {/* {slides.map((index) => (
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">
-                <span>{index + 1}</span>
+              <div className="embla__slide__number text-black">
+                <span className="">{index + 1}</span>
               </div>
             </div>
-          ))}
-        </div>
+          ))} */}
+        {slides}
       </div>
 
-      <div className="embla__controls">
+      <div className="embla__controls px-10">
         <div className="embla__buttons">
           <PrevButton
             onClick={() => onAutoplayButtonClick(onPrevButtonClick)}
@@ -62,9 +62,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
 
         <div
-          className={`embla__progress`.concat(
-            showAutoplayProgress ? "" : "embla__progress--hidden",
-          )}
+          className={`embla__progress ${showAutoplayProgress ? "" : "embla__progress--hidden"}`}
         >
           <div className="embla__progress__bar" ref={progressNode} />
         </div>

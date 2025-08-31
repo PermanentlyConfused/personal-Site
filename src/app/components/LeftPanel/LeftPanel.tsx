@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { FaGithub, FaInstagram, FaSteam } from "react-icons/fa";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { IconContext } from "react-icons";
 import Snortlax from "@/assets/Snortlax.png";
 import Current from "./Current/Current";

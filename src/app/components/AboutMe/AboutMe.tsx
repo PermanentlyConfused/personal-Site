@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
         <div className="my-auto flex flex-col bg-stone-200 p-5 font-[family-name:var(--font-montserrat)] text-black opacity-80 lg:w-[75%] lg:p-10">
           <h1 className="block text-2xl font-bold">About Me</h1>
           <p className="text-lg">
-            I’m a computer engineer
+            I'm a computer engineer
             <b className="text-lg">(glorified software engineer😅) </b>
             with a strong passion for improving everyday user experiences
             through technology. Originally born in Russia but proudly raised

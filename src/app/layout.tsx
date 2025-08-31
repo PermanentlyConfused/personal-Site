@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -24,24 +24,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/assets/logo2.png" type="image/png" />
-        <script
-          src="https://unpkg.com/@egjs/flicking/dist/flicking.pkgd.min.js"
-          crossOrigin="anonymous"
-        ></script>
-
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/@egjs/flicking/dist/flicking.css"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/@egjs/flicking/dist/flicking-inline.css"
-          crossOrigin="anonymous"
-        />
       </head>
       <body className={` ${montserrat.variable} scroll-smooth antialiased`}>
-        <noscript> You need to enable JavaScript to run this app. </noscript>
         {children}
       </body>
     </html>
