@@ -8,7 +8,7 @@ import construction from "@/assets/under.png";
 
 const NavBar: React.FC = () => {
   const openPDF = () => {
-    const pdfUrl = "/docs/ResumeV2.pdf";
+    const pdfUrl = "/docs/Resume.pdf";
     window.open(pdfUrl, "_blank");
   };
   return (
