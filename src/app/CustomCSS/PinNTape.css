@@ -181,7 +181,7 @@
 .blokken {
   position: relative;
   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  font-size: 2rem;
+  font-size: 1rem;
   background-image: linear-gradient(
     to bottom,
     #f6eee3 calc(1em - 1px),

@@ -6,17 +6,6 @@ import LeftPanel from "@/app/components/LeftPanel/LeftPanel";
 import NavBar from "@/app/components/NavBar/NavBar";
 
 export default function Home() {
-  useEffect(() => {
-    const target = document.getElementById("home"); //home,topRight
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center",
-      });
-    }
-  }, []);
-
   return (
     <div className="homeBG h-full lg:mx-20">
       {/* <DoodleBackgrounds /> */}

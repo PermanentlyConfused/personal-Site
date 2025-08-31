@@ -5,8 +5,8 @@ const AboutMe: React.FC = () => {
     <div className="homeBG flex flex-col items-center gap-10">
       <Header />
       {/* <div className="absolute h-40 w-full   -rotate-2 bg-black"></div> */}
-      <div className="flex flex-col items-center justify-center gap-5 lg:mx-60 lg:flex-row">
-        <div className="h-100 bg-white text-black lg:w-[25%]">
+      <div className="mx-2 flex flex-col items-center justify-center gap-5 xl:mx-30 xl:flex-row">
+        <div className="h-100 w-sm bg-white text-black lg:w-[25%]">
           INSERT POLAROID HERE
         </div>
         <div className="my-auto flex flex-col bg-stone-200 p-5 font-[family-name:var(--font-montserrat)] text-black opacity-80 lg:w-[75%] lg:p-10">

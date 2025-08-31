@@ -37,7 +37,7 @@ const ProjectMain: React.FC = () => {
 
   return (
     <div className="">
-      <div className="group relative mt-5 flex h-auto w-auto flex-col items-center justify-center">
+      <div className="group relative mt-5 flex flex-col items-center justify-center">
         <h1 className="mb-10 bg-linear-to-r from-[#eee7d7]/0 to-[#e5cbba]/100 px-5 py-2 text-center text-3xl font-semibold text-black drop-shadow-lg xl:px-10 xl:py-3 xl:text-5xl">
           Some Projects I Worked On
         </h1>
@@ -88,7 +88,7 @@ const ProjectMain: React.FC = () => {
                             <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-0:text-white lg:text-2xl">
                               LoRaWAN-based Smart Farm
                             </span>
-                            <div className="img-tape img-tape--4 -top-5 hidden lg:block">
+                            <div className="img-tape img-tape--4 -top-5 hidden md:block">
                               <Image
                                 src={LoRa.src}
                                 height={300}
@@ -105,7 +105,7 @@ const ProjectMain: React.FC = () => {
                             <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white lg:text-2xl">
                               AI Enabled FPGA-based Robotic Hand
                             </span>
-                            <div className="img-tape img-tape--4 -top-5 hidden lg:block">
+                            <div className="img-tape img-tape--4 -top-5 hidden md:block">
                               <Image
                                 src={Xilinx.src}
                                 height={300}
@@ -123,7 +123,7 @@ const ProjectMain: React.FC = () => {
                               FPGA-based Children Fingerprint Sensor and
                               Authentication system
                             </span>
-                            <div className="img-tape img-tape--4 -top-5 hidden lg:block">
+                            <div className="img-tape img-tape--4 -top-5 hidden md:block">
                               <Image
                                 src={Fingerprint.src}
                                 height={300}
@@ -140,7 +140,7 @@ const ProjectMain: React.FC = () => {
                             <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-3:text-white lg:text-2xl">
                               Boids Simulation on Procedural Generated World
                             </span>
-                            <div className="img-tape img-tape--4 -top-5 hidden lg:block">
+                            <div className="img-tape img-tape--4 -top-5 hidden md:block">
                               <Image
                                 src={Boids.src}
                                 height={300}
@@ -156,7 +156,7 @@ const ProjectMain: React.FC = () => {
                             <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-4:text-white lg:text-2xl">
                               3D Autonomous Driving with AgileX Scout 2.0
                             </span>
-                            <div className="img-tape img-tape--4 -top-5 hidden lg:block">
+                            <div className="img-tape img-tape--4 -top-5 hidden md:block">
                               <Image
                                 src={Autoware.src}
                                 height={300}

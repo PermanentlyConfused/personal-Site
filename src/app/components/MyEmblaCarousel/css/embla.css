@@ -1,5 +1,5 @@
 .embla {
-  max-width: 80vw;
+  max-width: 100vw;
   --slide-height: 40rem;
   --slide-spacing: 0.5rem;
   --slide-size: 33%;
@@ -96,7 +96,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-self: flex-start;
+
   color: BLACK;
   font-weight: 700;
   font-size: 1.4rem;
@@ -137,7 +137,6 @@
 .embla__progress {
   justify-self: center;
   transition: opacity 0.3s ease-in-out;
-  width: 20vw;
 }
 .embla__progress--hidden {
   opacity: 0;
