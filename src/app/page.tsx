@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 
 //import DoodleBackgrounds from "./components/DoodleBackgrounds/DoodleBackgrounds";
 import LeftPanel from "@/app/components/LeftPanel/LeftPanel";
