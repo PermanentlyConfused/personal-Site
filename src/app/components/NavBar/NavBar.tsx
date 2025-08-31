@@ -23,7 +23,7 @@ const NavBar: React.FC = () => {
           width={120}
           height={120}
           unoptimized
-          className="absolute -top-20 left-0"
+          className="absolute -top-20 left-0 -rotate-1"
         ></Image>
         <Image
           src={pop.src}
