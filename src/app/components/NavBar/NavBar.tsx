@@ -17,14 +17,19 @@ const NavBar: React.FC = () => {
         href="/about"
         className="flex aspect-square w-40 rotate-2 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:w-full lg:shadow-xl"
       >
-        <Image
-          src={Dog.src}
-          alt="dog_peeking.jpeg"
-          width={120}
-          height={120}
-          unoptimized
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ"
           className="absolute -top-20 left-0 -rotate-1"
-        ></Image>
+        >
+          <Image
+            src={Dog.src}
+            alt="dog_peeking.jpeg"
+            width={120}
+            height={120}
+            unoptimized
+          ></Image>
+        </a>
+
         <Image
           src={pop.src}
           unoptimized
