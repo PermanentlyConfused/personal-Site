@@ -12,23 +12,27 @@ const NavBar: React.FC = () => {
     window.open(pdfUrl, "_blank");
   };
   return (
-    <div className="flex flex-row flex-wrap items-center justify-center gap-6 py-20 lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-x-10 lg:gap-y-5 lg:py-15 lg:pt-10">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-6 pb-20 lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-x-10 lg:gap-y-5 lg:py-15 lg:pt-10">
       <a
         href="/about"
         className="flex aspect-square w-40 rotate-2 cursor-pointer items-center justify-center border-2 border-solid border-transparent bg-[#d9bda5]/80 text-center shadow-lg hover:scale-105 hover:border-black lg:w-full lg:shadow-xl"
       >
-        <a
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ"
+        <Image
+          src={Dog.src}
+          alt="dog_peeking.jpeg"
+          width={120}
+          height={120}
+          unoptimized
           className="absolute -top-20 left-0 -rotate-1"
-        >
-          <Image
-            src={Dog.src}
-            alt="dog_peeking.jpeg"
-            width={120}
-            height={120}
-            unoptimized
-          ></Image>
-        </a>
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open(
+              "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ",
+              "_blank",
+            );
+          }}
+        ></Image>
 
         <Image
           src={pop.src}
