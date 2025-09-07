@@ -17,6 +17,7 @@ const AboutMe: React.FC = () => {
             width={300}
             height={300}
             alt="Picofme"
+            unoptimized
             className="border-2 border-dashed border-black"
           />
         </div>
