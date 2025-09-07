@@ -2,7 +2,7 @@ import ShippingLabel from "./ShippingLabel/ShippingLabel";
 
 const Footer: React.FC = () => {
   return (
-    <div className="relative w-full bg-[#e8e1db]">
+    <div className="relative w-full border-t-1 border-black bg-[#e8e1db]">
       <div className="mx-auto max-w-screen-xl px-6 py-12 font-sans lg:px-12 lg:py-10">
         <div className="flex flex-col gap-10 font-[family-name:var(--font-montserrat)] lg:flex lg:flex-row lg:justify-between">
           <ShippingLabel

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+
 import architecture from "@/assets/Projects/LoRaSmartFarm/highlevelArch.png";
 import singlePCB from "@/assets/Projects/LoRaSmartFarm/singular.png";
 import solderedPCB from "@/assets/Projects/LoRaSmartFarm/both.png";
@@ -60,8 +61,9 @@ const LoRaWANFarm: React.FC = () => {
           <Image
             src={architecture.src}
             alt="HighLvArch.png"
-            height={400}
-            width={700}
+            height={1000}
+            width={1000}
+            unoptimized
             className="rounded-xl"
           />
           <p className="text-center text-base">

@@ -1,16 +1,28 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import Image from "next/image";
+
+import me from "@/assets/Me.png";
+import "../../CustomCSS/PinNTape.css";
 const AboutMe: React.FC = () => {
   return (
     <div className="homeBG flex flex-col items-center gap-10">
       <Header />
       {/* <div className="absolute h-40 w-full   -rotate-2 bg-black"></div> */}
-      <div className="mx-2 flex flex-col items-center justify-center gap-5 xl:mx-30 xl:flex-row">
-        <div className="h-100 w-sm bg-white text-black lg:w-[25%]">
-          INSERT POLAROID HERE
+      <div className="mx-2 flex flex-col items-center justify-center gap-5 lg:mx-30 lg:flex-row">
+        <div className="img-tape img-tape--2--alt -top-70 left-25 -rotate-10" />
+        <div className="box-1 hidden rounded-xl border-1 border-black p-3 lg:block lg:w-[15%]">
+          <Image
+            src={me.src}
+            width={300}
+            height={300}
+            alt="Picofme"
+            className="border-2 border-dashed border-black"
+          />
         </div>
+
         <div className="my-auto flex flex-col bg-stone-200 p-5 font-[family-name:var(--font-montserrat)] text-black opacity-80 lg:w-[75%] lg:p-10">
-          <h1 className="block text-2xl font-bold">About Me</h1>
+          <h1 className="block text-2xl font-bold">About Me🌟</h1>
           <p className="text-lg">
             I'm a computer engineer
             <b className="text-lg">(glorified software engineer😅) </b>

@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
   return (
-    <div className="relative flex w-full flex-row flex-wrap justify-center gap-3 overflow-hidden bg-[#d9bda5] py-5 font-[family-name:var(--font-montserrat)] font-semibold text-black lg:flex-nowrap lg:gap-x-10 lg:px-40">
+    <div className="relative flex w-full flex-row flex-wrap justify-center gap-3 overflow-hidden border-b-1 border-black bg-[#d9bda5] py-5 font-[family-name:var(--font-montserrat)] font-semibold text-black lg:flex-nowrap lg:gap-x-10 lg:px-40">
       {/* Home */}
       <motion.a
         initial={{ opacity: 0, y: -1000 }}

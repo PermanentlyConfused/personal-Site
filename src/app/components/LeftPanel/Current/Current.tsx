@@ -5,8 +5,8 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 const Current: React.FC = () => {
   return (
     <motion.div
-      initial={{ y: 200, rotate: -180 }}
-      whileInView={{ y: 0, rotate: 0 }}
+      initial={{ y: -200, rotate: -180, opacity: 0 }}
+      whileInView={{ y: 0, rotate: 0, opacity: 1 }}
       viewport={{ once: true }}
       transition={{
         duration: 2.5,

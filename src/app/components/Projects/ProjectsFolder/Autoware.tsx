@@ -1,14 +1,16 @@
 "use client";
 import Image from "next/image";
-import worldGeneration from "@/assets/Projects/Boids/GenerationSped.gif";
-import perlinNoise from "@/assets/Projects/Boids/PerlinNoise1D.png";
-import boidsSped from "@/assets/Projects/Boids/BoidsSped.gif";
+import scout from "@/assets/Projects/Autoware/scout_20.png";
+import autowareStack from "@/assets/Projects/Autoware/AutowareStack.png";
+import RViz2 from "@/assets/Projects/Autoware/ThirdPerson.png";
+import parking from "@/assets/Projects/Autoware/Parking.gif";
+
 const AutowareProj: React.FC = () => {
   return (
     <div className="flex h-full w-full flex-col gap-5 rounded-xl px-5 py-10 font-[family-name:var(--font-montserrat)] text-2xl text-black lg:text-3xl">
       {/* First row*/}
       <div className="flex flex-col lg:flex-row lg:justify-center">
-        <div className="flex flex-col lg:w-[60%] lg:px-4">
+        <div className="flex flex-col lg:w-[70%] lg:px-4">
           <h1 className="font-bold">
             3D Autonomous Driving with AgileX Scout 2.0
           </h1>
@@ -27,9 +29,9 @@ const AutowareProj: React.FC = () => {
             serve as a foundation for their future works and projects.
           </p>
         </div>
-        <div className="flex flex-col items-center lg:w-[40%]">
+        <div className="flex flex-col items-center lg:w-[30%]">
           <Image
-            src={worldGeneration.src}
+            src={scout.src}
             alt="Scout2.0Img"
             height={300}
             width={300}
@@ -38,81 +40,123 @@ const AutowareProj: React.FC = () => {
           />
           <p className="mt-2 text-center text-base">
             {" "}
-            Picture 1: AgileX Scout 2.0(with add-ons){" "}
+            Picture 1: AgileX Scout 2.0(without add-ons){" "}
           </p>
         </div>
       </div>
       <hr className="my-1 lg:mr-0" />
       {/* Row2 */}
-      <div className="flex flex-col lg:flex-row lg:justify-center">
-        <div className="flex flex-col items-center justify-center lg:w-[50%] lg:pl-4">
+      <div className="flex flex-row">
+        <div className="flex w-[30%] flex-col items-center justify-center lg:pl-4">
           <Image
-            src={perlinNoise.src}
+            src={autowareStack.src}
             alt="High Level design"
             height={250}
             width={400}
             className="rounded-xl"
           />
           <p className="text-center text-base">
-            {" "}
-            Picture 2: Project High-level Design
+            Picture 2: High-level view of autoware AV stack
           </p>
         </div>
-        <div className="flex flex-col lg:w-[50%] lg:pl-4">
+        <div className="flex w-[70%] flex-col pl-6">
           <h1 className="font-bold">Technical Stuff</h1>
           <h1 className="text-2xl">Autoware as a navigation framework</h1>
           <p className="text-base">
-            For this world's generation, I have a total of 6 layers of perlin
-            noise octaves 3,6,12,25,50,80. By summing up all of these signals
-            while halving their weights for each octave, I was able to have a 1D
-            signal that looks "random" with decent fine details. In order to
-            convert this to 2D plane, I created a 2D matrix(based on window
-            width and height) and computed the weighted sum of noise values for
-            each grid cell. Lastly, I created a range based on min/max values in
-            the 2D matrix to normalize and create a integer-based mapping for
-            the terrain.
+            Autoware's AV(Autonomous Vehicle) stack is a layered, modular
+            architecture that follows the typical flow of autonomous driving:
+            sensing the environment, understanding it, deciding on actions, and
+            executing those actions — with tight feedback loops for real-time
+            operation.
+          </p>
+          <h1 className="text-2xl">Hardware Inputs </h1>
+          <p className="text-base">
+            At the top of the Autoware stack are the hardware components that
+            serve as the foundation for autonomous functionality. These include
+            a variety of sensors such as Helios P16 LiDAR Logitech C920 camera,
+            along with the vehicle’s onboard computing and control interfaces
+            communicated via CAN interface. The sensors collect real-time data
+            from the vehicle's environment, providing crucial inputs for
+            mapping, localization, and perception. The vehicle interface handles
+            communication between the software stack and the physical vehicle,
+            allowing software-generated commands to be executed by the vehicle's
+            actuators.{" "}
+          </p>
+          <h1 className="text-2xl">Localization </h1>
+          <p className="text-base">
+            Localization determines the vehicle’s exact position using sensor
+            data like LiDAR, GPS, and IMU. This accurate positioning is
+            essential for safe navigation and aligning the vehicle with its
+            environment and map.{" "}
+          </p>
+          <h1 className="text-2xl">Perception </h1>
+          <p className="text-base">
+            Perception processes sensor data to understand the surroundings. It
+            detects and tracks dynamic objects, segments obstacles, and
+            identifies traffic lights, providing the system with a real-time
+            view of the environment.
+          </p>
+          <h1 className="text-2xl">Planning </h1>
+          <p className="text-base">
+            Planning decides how the vehicle should move. It sets the mission
+            goal, selects the driving scenario (e.g., lane following, parking),
+            and generates a path based on the current situation.{" "}
+          </p>
+          <h1 className="text-2xl">Control </h1>
+          <p className="text-base">
+            Control executes the planned path by sending commands to the
+            vehicle's actuators for steering, acceleration, and braking. This is
+            done with a custom Scout 2.0 vehicle interface communicating via the
+            aforementioned on-board CAN interface.
           </p>
         </div>
       </div>
+      <hr className="my-1 lg:mr-0" />
       <div className="flex flex-col justify-center lg:flex-row">
-        <div className="flex flex-col lg:w-[60%] lg:px-4">
-          <h2 className="text-2xl">
-            Boids Algorithm(Flocks of Birds Simulation)
-          </h2>
+        <div className="flex flex-col lg:w-[50%] lg:px-2">
+          <h2 className="text-2xl">Simulation Environment</h2>
           <p className="text-base">
-            Boid's algorithm is simple and can be broken up into three main
-            concepts: Separation, Alignment, and Cohesion. Each of the "bird" in
-            the flock is an object that has its own position, velocity, and
-            acceleration vectors that can interact with other object's
-            variables. Separation induces a small acceleration vector opposite
-            to the other boid objects if their positions are too close to each
-            other. Alignment will adjust the acceleration vector of the
-            individual boid based on the other boids' velocity that are in close
-            proximity. Cohesion acts as a reverse separation force to keep the
-            boids in a group together by directing the acceleration vector
-            towards the center of the local boid group. I wanted the birds to
-            avoid very high terrains so I ran a BFS algorithm on the map to get
-            "clumps" of the snow terrains in close proximity and create an
-            acceleration vector directing the boids AWAY from the center of
-            these "clumps".
+            With the Autonomous Vehicle (AV) Stack fully implemented, all
+            sensors accurately defined, and high-fidelity 3D vehicle models
+            integrated into the system, we are now able to successfully launch a
+            comprehensive simulation environment. <br />
+            This environment operates on a 3D Point Cloud Data (PCD) and
+            high-definition vector map, providing a realistic and detailed
+            testing ground to observe how Autoware controls the vehicle and
+            responds to a variety of real-world scenarios. Ultilizing data from
+            both LiDAR and camera sensors, Autoware is capable of detecting and
+            identifying a wide range of objects. Static obstacles such as
+            traffic lights and road signs are reliably recognized, while dynamic
+            entities—including pedestrians, other vehicles, and cyclists—are
+            tracked in real time. This allows for reliable navigation through
+            complex urban and suburban settings. Additionally, the AV Stack
+            demonstrates advanced decision-making capabilities. It supports
+            adaptive behavior such as dynamic lane merging and precision
+            parking(as shown in picture 3).
+            <br />
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center lg:w-[40%]">
+        <div className="flex flex-col items-center justify-center lg:w-[50%]">
           <Image
-            src={boidsSped.src}
-            alt="BoidsSped gif"
-            height={300}
-            width={300}
+            src={parking.src}
+            alt="RViz View Parking"
+            height={700}
+            width={700}
             unoptimized
             className="rounded-xl"
           />
           <p className="text-center text-base">
-            {" "}
-            Picture 3: Flock of birds(Boids) flying towards cursor and avoiding
-            high terrain{" "}
+            Picture 3: AgileX Scout 2.0 Parking on Simulated Environment
           </p>
           <br />
         </div>
+      </div>
+      <hr className="my-1 lg:mr-0" />
+      <h1 className="font-bold">Live Integration</h1>
+      <p className="text-base">To be updated</p>
+      <div className="flex flex-row">
+        <div className="flex w-[30%] flex-col items-center justify-center lg:pl-4"></div>
+        <div className="flex w-[70%] flex-col pl-6"></div>
       </div>
     </div>
   );

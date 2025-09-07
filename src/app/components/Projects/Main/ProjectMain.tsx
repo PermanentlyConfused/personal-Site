@@ -38,7 +38,7 @@ const ProjectMain: React.FC = () => {
   return (
     <div className="">
       <div className="group relative mt-5 flex flex-col items-center justify-center">
-        <h1 className="mb-10 bg-linear-to-r from-[#eee7d7]/0 to-[#e5cbba]/100 px-5 py-2 text-center text-3xl font-semibold text-black drop-shadow-lg xl:px-10 xl:py-3 xl:text-5xl">
+        <h1 className="mb-10 bg-[#e5cbba]/100 px-5 py-2 text-center text-3xl font-semibold text-black xl:px-10 xl:py-3 xl:text-5xl">
           Some Projects I Worked On
         </h1>
 
@@ -51,7 +51,7 @@ const ProjectMain: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="mt-5 overflow-y-scroll rounded-lg bg-[#f6eee3] lg:h-[30%] lg:w-[70%] xl:pt-0"
+              className="mt-5 overflow-y-scroll rounded-lg bg-[#f6eee3] shadow-2xl lg:h-[30%] lg:w-[70%] xl:pt-0"
               onClick={() => setExpanded(null)}
             >
               <div className="pin bot-20" />
