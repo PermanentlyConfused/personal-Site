@@ -59,7 +59,7 @@ const ProjectMain: React.FC = () => {
               {expanded == 1 && <FPGAHandProject />}
               {expanded == 2 && (
                 <div className="flex flex-col items-center justify-center bg-white p-10 text-lg text-black shadow-lg">
-                  Box {expanded + 1} Content
+                  Placeholder Box, Yell at Art and make him go back to work
                   <p className="mt-4 text-base">Click anywhere to close</p>
                 </div>
               )}
