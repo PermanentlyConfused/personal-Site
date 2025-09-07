@@ -40,7 +40,7 @@ const NavBar: React.FC = () => {
           alt="me_popping.jpg"
           width={70}
           height={70}
-          className="absolute top-19.5 left-25 h-20 w-15 lg:top-26 lg:left-30 lg:h-23 lg:w-18"
+          className="absolute top-19.5 left-25 h-20 w-15 lg:top-25.5 lg:left-30 lg:h-23 lg:w-18"
         ></Image>
         <div className="text-lg text-black lg:text-xl">About Me</div>
       </a>

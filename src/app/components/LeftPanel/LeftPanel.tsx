@@ -21,7 +21,7 @@ const LeftPanel: React.FC = () => {
           }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0, ease: "easeInOut" }}
-          className="box-1 rotate-0 rounded-md border-1 border-solid border-black lg:rotate-2"
+          className="box-1 rotate-0 rounded-md border-1 border-solid border-black p-3 lg:rotate-2"
         >
           <motion.i
             initial={{

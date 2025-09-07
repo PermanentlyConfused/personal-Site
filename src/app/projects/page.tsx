@@ -5,7 +5,7 @@ export default function AboutMainPage() {
   return (
     <div className="homeBG">
       <Header />
-      <div className="flex h-auto flex-col items-center justify-center py-10 text-black">
+      <div className="flex h-auto flex-col items-center justify-center py-5 text-black">
         <ProjectMain />
       </div>
       <Footer />

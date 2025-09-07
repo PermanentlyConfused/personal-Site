@@ -1,6 +1,6 @@
-# Hi
+# Hello there~
 
-Just a repo for my website. Built on React, TypeScript, and Next.js with Tailwind
+Just a repository for my website. Built on React, TypeScript, and Next.js with Tailwind
 
 ## Notes:
 

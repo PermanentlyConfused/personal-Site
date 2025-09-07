@@ -38,7 +38,7 @@ const ProjectMain: React.FC = () => {
   return (
     <div className="">
       <div className="group relative mt-5 flex flex-col items-center justify-center">
-        <h1 className="mb-10 bg-[#e5cbba]/100 px-5 py-2 text-center text-3xl font-semibold text-black xl:px-10 xl:py-3 xl:text-5xl">
+        <h1 className="mb-10 bg-[url('/assets/stupid.png')] bg-cover px-5 py-2 text-center text-3xl font-semibold text-black xl:px-10 xl:py-8 xl:text-5xl">
           Some Projects I Worked On
         </h1>
 
