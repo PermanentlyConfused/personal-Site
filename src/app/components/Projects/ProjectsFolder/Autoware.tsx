@@ -2,7 +2,6 @@
 import Image from "next/image";
 import scout from "@/assets/Projects/Autoware/scout_20.png";
 import autowareStack from "@/assets/Projects/Autoware/AutowareStack.png";
-import RViz2 from "@/assets/Projects/Autoware/ThirdPerson.png";
 import parking from "@/assets/Projects/Autoware/Parking.gif";
 
 const AutowareProj: React.FC = () => {
