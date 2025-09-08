@@ -11,7 +11,7 @@ import "@/app/CustomCSS/PinNTape.css";
 const LeftPanel: React.FC = () => {
   return (
     <div className="flex flex-col items-center">
-      <header className="m-10 flex lg:top-0 lg:mb-0 lg:flex lg:max-h-fit lg:w-[100%] lg:flex-col lg:justify-between">
+      <header className="my-10 flex lg:top-0 lg:my-0 lg:flex lg:max-h-fit lg:w-[100%] lg:flex-col lg:justify-between">
         <motion.div
           initial={{
             translateX: "-200px",
