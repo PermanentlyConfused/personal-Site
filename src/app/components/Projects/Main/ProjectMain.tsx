@@ -1,6 +1,4 @@
 "use client";
-//!This component will not be rendered on small screens
-
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import React from "react";
@@ -23,6 +21,12 @@ import Boids from "@/assets/Projects/Boids/BoidsThumbNail.png";
 import Fingerprint from "@/assets/Projects/Fingerprint/fingerprintThumbnail.png";
 import Autoware from "@/assets/Projects/Autoware/autowareLogo.png";
 import construction from "@/assets/under.png";
+
+import AutoDoodle from "@/assets/Projects/Autoware/doodle.png";
+import LoraDoodle from "@/assets/Projects/LoRaSmartFarm/doodle.png";
+import BoidDoodle from "@/assets/Projects/Boids/doodle.png";
+import FingerDoodle from "@/assets/Projects/Fingerprint/doodle.png";
+import HandDoodle from "@/assets/Projects/FPGAHand/doodle.png";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
@@ -86,6 +90,13 @@ const ProjectMain: React.FC = () => {
                             <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-0:text-white lg:text-2xl">
                               LoRaWAN-based Smart Farm
                             </span>
+                            <Image
+                              src={LoraDoodle.src}
+                              height={100}
+                              width={100}
+                              alt="Lora Doodle"
+                              className="absolute right-2 bottom-0"
+                            />
                             <div className="img-tape img-tape--4 -top-5">
                               <Image
                                 src={LoRa.src}
@@ -103,6 +114,13 @@ const ProjectMain: React.FC = () => {
                             <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-1:text-white lg:text-2xl">
                               AI Enabled FPGA-based Robotic Hand
                             </span>
+                            <Image
+                              src={HandDoodle.src}
+                              height={100}
+                              width={100}
+                              alt="Hand Doodle"
+                              className="absolute right-2 bottom-0"
+                            />
                             <div className="img-tape img-tape--4 -top-5">
                               <Image
                                 src={Xilinx.src}
@@ -122,6 +140,14 @@ const ProjectMain: React.FC = () => {
                             }}
                             className="embla__slide__content relative flex flex-col gap-3 overflow-hidden rounded-3xl px-10 text-center text-black"
                           >
+                            {" "}
+                            <Image
+                              src={FingerDoodle.src}
+                              height={100}
+                              width={100}
+                              alt="Finger Doodle"
+                              className="absolute right-2 bottom-0"
+                            />
                             <Image
                               src={construction.src}
                               unoptimized
@@ -159,6 +185,13 @@ const ProjectMain: React.FC = () => {
                             <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-4:text-white lg:text-2xl">
                               3D Autonomous Driving with AgileX Scout 2.0
                             </span>
+                            <Image
+                              src={AutoDoodle.src}
+                              height={100}
+                              width={100}
+                              alt="Autoware Doodle"
+                              className="absolute right-2 bottom-0"
+                            />
                             <div className="img-tape img-tape--4 -top-5">
                               <Image
                                 src={Autoware.src}
@@ -176,6 +209,13 @@ const ProjectMain: React.FC = () => {
                             <span className="mb-2 text-xl font-semibold text-black transition-colors duration-300 group-hover/project-3:text-white lg:text-2xl">
                               Boids Simulation on Procedural Generated World
                             </span>
+                            <Image
+                              src={BoidDoodle.src}
+                              height={100}
+                              width={200}
+                              alt="Boids Doodle"
+                              className="absolute right-2 bottom-0"
+                            />
                             <div className="img-tape img-tape--4 -top-5">
                               <Image
                                 src={Boids.src}
