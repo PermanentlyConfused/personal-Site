@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-import "@/app/CustomCSS/FooterStyle.css";
+import "@/app/CustomCSS/Backgrounds.css";
 import "@/app/CustomCSS/PinNTape.css";
 
 const Header: React.FC = () => {

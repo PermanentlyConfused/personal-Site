@@ -37,7 +37,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { showAutoplayProgress } = useAutoplayProgress(emblaApi, progressNode);
 
   return (
-    <div className="embla md:px-20 lg:max-w-[80vw] lg:px-40 xl:px-60">
+    <div className="embla lg:max-w-[80vw] lg:px-40 xl:px-60">
       <div className="embla__viewport" ref={emblaRef}>
         {/* {slides.map((index) => (
             <div className="embla__slide" key={index}>

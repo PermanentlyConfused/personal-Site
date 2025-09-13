@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import "@/app/CustomCSS/FooterStyle.css";
+import "@/app/CustomCSS/Backgrounds.css";
 import "@/app/CustomCSS/PinNTape.css";
 import { ReactNode } from "react";
 

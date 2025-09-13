@@ -12,14 +12,14 @@ const AboutMe: React.FC = () => {
       <div className="mx-2 flex flex-col items-center justify-center gap-5 lg:mx-30 lg:flex-row">
         <div className="box-1 hidden rounded-xl border-1 border-black p-3 xl:block xl:w-1/6">
           <div className="img-tape img-tape--1--alt -top-[10%] left-[20%] z-2 -rotate-8" />
-          <div className="relative h-auto w-full">
+          <div className="relative h-auto w-full bg-white/90 p-2 shadow-xl">
             <Image
               src={me.src}
               alt="Iwanmouse"
               width={300}
               height={300}
               unoptimized
-              className="border-2 border-dashed border-black object-contain"
+              className="rounded-xl border-3 border-solid border-black object-contain"
             />
           </div>
         </div>

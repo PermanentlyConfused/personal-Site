@@ -1,0 +1,12 @@
+.slider {
+  --divider-color: rgba(0, 0, 0, 1);
+  --divider-width: clamp(2px, 5vw, 1px);
+  --default-handle-color: rgba(0, 0, 0, 1);
+  transition: box-shadow 200ms ease-in-out;
+  --default-handle-width: clamp(40px, 5vw, 200px);
+}
+
+.slider:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 2px rgb(120, 120, 120);
+}

@@ -5,6 +5,10 @@ import architecture from "@/assets/Projects/LoRaSmartFarm/highlevelArch.png";
 import singlePCB from "@/assets/Projects/LoRaSmartFarm/singular.png";
 import solderedPCB from "@/assets/Projects/LoRaSmartFarm/both.png";
 import gateway from "@/assets/Projects/LoRaSmartFarm/Gateway.png";
+import pcb from "@/assets/Projects/LoRaSmartFarm/pcbdesign.png";
+
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
+import "@/app/CustomCSS/imgSlider.css";
 
 const LoRaWANFarm: React.FC = () => {
   return (
@@ -28,13 +32,29 @@ const LoRaWANFarm: React.FC = () => {
             improve overall crop health.
           </p>
         </div>
-        <div className="flex flex-col items-center pt-4 lg:w-[40%]">
-          <Image
-            src={singlePCB.src}
-            alt="CustomPCBs"
-            width={400}
-            height={400}
-          ></Image>
+        <div
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          }}
+          className="flex flex-col items-center pt-4 lg:w-[40%]"
+        >
+          <ImgComparisonSlider className="slider" value={85}>
+            <Image
+              height={400}
+              width={400}
+              alt="help"
+              slot="first"
+              src={pcb.src}
+            />
+            <Image
+              src={singlePCB.src}
+              alt="CustomPCBs"
+              width={400}
+              height={400}
+              slot="second"
+            ></Image>
+          </ImgComparisonSlider>
           <p className="text-center text-base">
             {" "}
             Picture 1: Custom PCB with Seeed's Wio-E5
@@ -92,7 +112,7 @@ const LoRaWANFarm: React.FC = () => {
             src={solderedPCB.src}
             alt="CustomPCBs"
             width={400}
-            height={300}
+            height={400}
           ></Image>
           <p className="text-center text-base">
             Picture 3: Finalized Custom LoRa End Nodes.
