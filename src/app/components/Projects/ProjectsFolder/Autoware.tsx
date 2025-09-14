@@ -45,8 +45,8 @@ const AutowareProj: React.FC = () => {
       </div>
       <hr className="my-1 lg:mr-0" />
       {/* Row2 */}
-      <div className="flex flex-row">
-        <div className="flex w-[30%] flex-col items-center justify-center lg:pl-4">
+      <div className="flex flex-col-reverse lg:flex-row">
+        <div className="flex flex-col items-center justify-center lg:w-[30%] lg:pl-4">
           <Image
             src={autowareStack.src}
             alt="High Level design"
@@ -58,7 +58,7 @@ const AutowareProj: React.FC = () => {
             Picture 2: High-level view of autoware AV stack
           </p>
         </div>
-        <div className="flex w-[70%] flex-col pl-6">
+        <div className="flex flex-col lg:w-[70%] lg:pl-6">
           <h1 className="font-bold">Technical Stuff</h1>
           <h1 className="text-2xl">Autoware as a navigation framework</h1>
           <p className="text-base">

@@ -9,7 +9,7 @@ const AboutMe: React.FC = () => {
     <div className="homeBG flex flex-col items-center gap-10">
       <Header />
       {/* <div className="absolute h-40 w-full   -rotate-2 bg-black"></div> */}
-      <div className="mx-2 flex flex-col items-center justify-center gap-5 lg:mx-30 lg:flex-row">
+      <div className="mx-2 flex flex-col items-center justify-center gap-5 py-20 lg:mx-30 lg:flex-row lg:py-30">
         <div className="box-1 hidden rounded-xl border-1 border-black p-3 xl:block xl:w-1/6">
           <div className="img-tape img-tape--1--alt -top-[10%] left-[20%] z-2 -rotate-8" />
           <div className="relative h-auto w-full bg-white/90 p-2 shadow-xl">

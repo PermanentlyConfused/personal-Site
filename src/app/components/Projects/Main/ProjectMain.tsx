@@ -187,8 +187,8 @@ const ProjectMain: React.FC = () => {
                             </span>
                             <Image
                               src={AutoDoodle.src}
-                              height={100}
-                              width={100}
+                              height={150}
+                              width={150}
                               alt="Autoware Doodle"
                               className="absolute right-2 bottom-0"
                             />

@@ -54,6 +54,23 @@ const LoRaWANFarm: React.FC = () => {
               height={400}
               slot="second"
             ></Image>
+            <svg
+              {...{
+                slot: "handle",
+                class: "custom-animated-handle",
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+              width="100"
+              viewBox="-8 -3 16 6"
+            >
+              <path
+                stroke="#fff"
+                d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2"
+                strokeWidth="1"
+                fill="#fff"
+                vectorEffect="non-scaling-stroke"
+              ></path>
+            </svg>
           </ImgComparisonSlider>
           <p className="text-center text-base">
             {" "}
