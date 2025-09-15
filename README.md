@@ -1,7 +1,7 @@
 # Hello there~
 
-Just a repository for my website. Built on React, TypeScript, and Next.js with Tailwind
-
+Just a repository for my website. Built on React, TypeScript, and Next.js with Tailwind.\
+Hosted at [workofart.zip](https://workofart.zip/)
 ## Notes:
 
 - Color Scheme: [link](https://www.color-hex.com/color-palette/104061)
