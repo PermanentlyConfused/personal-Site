@@ -46,7 +46,7 @@ const AutowareProj: React.FC = () => {
       <hr className="my-1 lg:mr-0" />
       {/* Row2 */}
       <div className="flex flex-col-reverse lg:flex-row">
-        <div className="flex flex-col items-center justify-center lg:w-[30%] lg:pl-4">
+        <div className="flex flex-col items-center justify-center pt-2 lg:w-[30%] lg:pt-0 lg:pl-4">
           <Image
             src={autowareStack.src}
             alt="High Level design"
