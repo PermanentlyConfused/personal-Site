@@ -1,6 +1,12 @@
 "use client";
 import Image from "next/image";
-import { FaGithub, FaInstagram, FaSteam } from "react-icons/fa";
+import {
+  FaGithub,
+  FaInstagram,
+  FaSteam,
+  FaLinkedin,
+  FaLink,
+} from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import { IconContext } from "react-icons";
@@ -62,6 +68,13 @@ const LeftPanel: React.FC = () => {
           </div>
           <IconContext.Provider value={{ className: "mt-5", size: "30" }}>
             <div className="flex flex-row justify-center gap-2 lg:gap-5">
+              <a
+                href="https://www.linkedin.com/in/artynguyen/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="text-black transition-colors duration-300 hover:text-[#0072b1]" />
+              </a>
               <a
                 href="https://github.com/PermanentlyConfused"
                 target="_blank"
