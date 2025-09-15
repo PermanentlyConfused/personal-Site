@@ -1,12 +1,6 @@
 "use client";
 import Image from "next/image";
-import {
-  FaGithub,
-  FaInstagram,
-  FaSteam,
-  FaLinkedin,
-  FaLink,
-} from "react-icons/fa";
+import { FaGithub, FaInstagram, FaSteam, FaLinkedin } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import { IconContext } from "react-icons";
