@@ -1,6 +1,12 @@
 "use client";
 import Image from "next/image";
-import { FaGithub, FaInstagram, FaSteam, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaInstagram,
+  FaSteam,
+  FaLinkedin,
+  FaDiscord,
+} from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import { IconContext } from "react-icons";
@@ -89,6 +95,13 @@ const LeftPanel: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 <FaSteam className="text-black transition-colors duration-300 hover:text-[#1b2838]" />
+              </a>
+              <a
+                href="https://discordapp.com/users/izart._."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaDiscord className="text-black transition-colors duration-300 hover:text-[#7289da]" />
               </a>
             </div>
           </IconContext.Provider>
