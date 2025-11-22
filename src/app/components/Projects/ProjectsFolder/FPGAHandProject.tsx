@@ -63,7 +63,7 @@ const FPGAHandProject: React.FC = () => {
       {/* Row2 */}
       <div className="flex flex-col lg:flex-row lg:justify-center">
         <div className="flex flex-col lg:flex-row lg:gap-10 lg:px-4">
-          <div className="lg:w-[60%]">
+          <div className="lg:w-[50%]">
             <h1 className="font-bold">Technical Stuff</h1>
             <h1 className="text-2xl font-semibold">Creating the Overlay:</h1>
             <p className="text-base">
@@ -86,23 +86,29 @@ const FPGAHandProject: React.FC = () => {
                 While this module is exportable into our Vivado project as an
                 IP-block, this will not let us ultilize the DPU from the
                 soft-core processor as we also need a .XCLBIN file that includes
-                the DPU's bitstream to program the DPU onto the FPGA fabric.
+                the DPU's bitstream to program the DPU onto the FPGA
+                fabric.{" "}
               </b>
-              For us to ultilie the DPU, we would have to create a brand new
-              Vivado project to define the hardware platform base for the DPU.
-              The hardware platform would define all the clocking wizards,
-              processer clock resets, and Zynq core. This step is required to
+              For us to ultilie the DPU, we would have to create a Vitis
+              platform to incorporate the DPU into our design. There are two
+              different ways to create the hardware platform for Vitis, using
+              petalinux or create a hardware platform project on Vivado. The two
+              approaches will yield the same result to be imported into Vitis,
+              however, creating a Vivado project is much faster. on our Vivado
+              project, we will define the hardware platform base for the DPU
+              including: all the clocking wizards, processer clock resets,
+              interrupt controller, and Zynq core. This step is required to
               meticulously define the clock speeds and parameters for the DPU to
               use(Notice that we do not add the DPU IP block itself). At this
               step, the Vivado block design would look similar to Picture 2.
             </p>
           </div>
-          <div className="flex flex-col items-center pt-4 text-center lg:w-[40%] lg:pt-18">
+          <div className="flex flex-col items-center pt-4 text-center lg:w-[50%] lg:pt-18">
             <Image
               src={vitisStep1.src}
               alt="asdasdasd"
-              width={500}
-              height={500}
+              width={600}
+              height={600}
               unoptimized
             ></Image>
             <p className="text-base">Picture 2: Defined Hardware Platform</p>
@@ -162,11 +168,14 @@ const FPGAHandProject: React.FC = () => {
               Vivado build under Vitis to finally implement the DPU into our
               Vivado project's block design(
               <b>
-                Funnily enough, any host computer synthesizing this build with
-                less than 32GB of RAM will make the build fail.
+                Funnily enough, any host computer--That I have tried on,
+                synthesizing this build with less than 32GB of RAM will make the
+                build fail.
               </b>
               ). This step will generate us the .xclbin file that is required
-              for the DPU to run.
+              for the DPU to run. This step will also generate a fingerprint
+              file called 'arch.json' that is required for Vitis AI to compile
+              the custom .xmodel files to be ran on the board.
             </p>
           </div>
         </div>
@@ -208,6 +217,58 @@ const FPGAHandProject: React.FC = () => {
         </div>
       </div>
       <OpenPDFButton></OpenPDFButton>
+      <hr className="my-1 lg:mr-0" />
+      <div className="lg:justify-left flex flex-col lg:flex-row lg:px-4">
+        <div className="flex flex-col lg:gap-10">
+          <div className="">
+            <h1 className="font-bold">Common Issues(That I have faced):</h1>
+            <p className="text-lg">1{")"} Timing errors</p>
+            <p className="text-base">
+              One of the most common issues faced when syhtnethsizing and
+              implementing the final step in Vivado would be Design failing
+              timing checks 'errors'. These errors are very common DPU's B4096
+              architecture on Kria boards due to the very tight rerouting effort
+              needed for the URAM {"->"} BRAM conversion and the limited onboard
+              resources leading to all the DPU logic being overloaded onto one
+              clock source(300Mhz clock) causing level 6 timing congestions. My
+              method of 'fixing' this issue is changing Vivado's implementation
+              strategy to further optimize the clock paths. Through testing,
+              doing this will reduce the WNS and TNS to very very negligible
+              values( ~(-2)ps WNS and ~(-20ps) TNS). By default, the vpl
+              configurations created from Vitis will refuse to generate
+              bitstream with TNS {"<"} 0 but if WNS and TNS is low enough(to
+              your discretion) then you can disable the
+              "skip_timing_and_scaling" flag in "_vpl_pre_write_bit_pdi.tcl"
+              config file to force bitstream generation.
+            </p>
+            <br />
+            <p className="text-lg">2{")"} Vitis AI .xmodel compilation</p>
+            <p className="text-base">
+              While this issue is out of scope of this project blog(software
+              focused), it requires the arch.json fingerprint generated by Vitis
+              so I believe it is relevant to be discussed.
+              <br /> During the configuration in Vitis step, we used Vitis AI
+              Runtime 3.5 for our ZYNQMP common image for the ISA1_B4096 DPU
+              architecture build. However, Vitis automatically creates the
+              arch.json aimed at version Vitis AI version 2.5. Further
+              explanation why this is a problem is that Vitis AI 2.5 vs Vitis AI{" "}
+              {">"}3.0 have different 'arch.json' fingerprints for the same DPU
+              architecture. For our DPU architecture "DPUCZDX8G_ISA1_B4096".{" "}
+              <br />
+              Vitis AI 2.5's arch.json would be
+              <b>{' {"fingerprint":"0x101000016010407"}'}</b>
+              <br />
+              Vitis AI 3.0(and above)'s arch.json would be
+              <b> {' {"fingerprint":"0x101000056010407"}'}</b>
+              <br />
+              Running a .xmodel compiled on Vitis AI 3.5 using the 2.5
+              fingerprint on the Kria kills the kernel and prompts a full OS
+              restart. The solution to this problem is to simply use Vitis 2.5
+              with the generated(v2.5) arch.json to compile your model.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
