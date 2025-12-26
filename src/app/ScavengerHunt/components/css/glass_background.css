@@ -8,6 +8,7 @@
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  background-color: rgba(30, 38, 46, 0.85);
 }
 
 .glassContainer::before {
@@ -16,8 +17,6 @@
   inset: 0;
   z-index: 0;
   overflow: hidden;
-
-  background-color: rgba(30, 38, 46, 0.8);
 }
 
 .glassContainer::after {
