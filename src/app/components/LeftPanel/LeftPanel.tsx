@@ -10,7 +10,6 @@ import {
 
 import { motion } from "framer-motion";
 import { IconContext } from "react-icons";
-import Snortlax from "@/assets/Snortlax.png";
 import Me from "@/assets/happyme.png";
 import Current from "./Current/Current";
 import "@/app/CustomCSS/PinNTape.css";

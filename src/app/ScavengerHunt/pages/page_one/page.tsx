@@ -1,7 +1,7 @@
-import ScavHeader from "../components/ScavHeader/ScavHeader";
-import ScavFooter from "../components/ScavFooter/ScavFooter";
-import ScavGameBox from "../components/ScavGameBox/ScavGameBox";
-import { Question } from "../components/ScavGameBox/types/question";
+import ScavHeader from "../../components/ScavHeader/ScavHeader";
+import ScavFooter from "../../components/ScavFooter/ScavFooter";
+import ScavGameBox from "../../components/ScavGameBox/ScavGameBox";
+import { Question } from "../../components/ScavGameBox/types/question";
 const questions: Question[] = [
   {
     question: "Who is SASE Clarkson's President",

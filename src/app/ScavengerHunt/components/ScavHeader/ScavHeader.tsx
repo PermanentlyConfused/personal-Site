@@ -10,6 +10,10 @@ const ScavHeader: React.FC = () => {
   return (
     <div>
       <div className="glassContainer top-0 flex w-full justify-evenly py-4 font-[family-name:var(--font-montserrat)] font-semibold text-black lg:flex-nowrap lg:justify-center lg:py-4">
+        <p className="hidden text-white lg:block">
+          this webgame was not really built for desktop, why would you ever lug
+          around a laptop for this GBM XD.
+        </p>
         <div className="relative aspect-[1/1] w-12 md:w-24">
           <Image
             src={SaseLogo}
