@@ -11,6 +11,7 @@ import {
 import { motion } from "framer-motion";
 import { IconContext } from "react-icons";
 import Snortlax from "@/assets/Snortlax.png";
+import Me from "@/assets/happyme.png";
 import Current from "./Current/Current";
 import "@/app/CustomCSS/PinNTape.css";
 
@@ -57,7 +58,7 @@ const LeftPanel: React.FC = () => {
             <div className="hidden lg:block">
               <div className="img-tape img-tape--2 md:left-[5%] lg:left-[5%]">
                 <Image
-                  src={Snortlax.src}
+                  src={Me.src}
                   alt="Picture of snortlax"
                   width={400}
                   height={500}

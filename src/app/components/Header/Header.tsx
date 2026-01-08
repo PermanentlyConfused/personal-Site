@@ -19,7 +19,7 @@ const Header: React.FC = () => {
           delay: 0.1,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="group/home flex text-black lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[25%] lg:flex-col lg:py-5"
+        className="group/home flex text-black lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[15%] lg:flex-col lg:py-5"
         href="/"
       >
         <motion.div
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
           delay: 0.2,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="group/about flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[25%] lg:flex-col lg:py-5"
+        className="group/about flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[15%] lg:flex-col lg:py-5"
         href="/about"
       >
         <motion.div
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
           delay: 0.3,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="group/bookmarks flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[25%] lg:flex-col lg:py-5"
+        className="group/bookmarks flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[15%] lg:flex-col lg:py-5"
         href="/bookmarks"
       >
         <motion.div
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
           delay: 0.4,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="group/projects flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[25%] lg:flex-col lg:py-5"
+        className="group/projects flex lg:relative lg:top-0 lg:flex lg:max-h-fit lg:w-[15%] lg:flex-col lg:py-5"
         href="/projects"
       >
         <motion.div

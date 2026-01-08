@@ -3,8 +3,14 @@ import Header from "../Header/Header";
 import Image from "next/image";
 
 import me from "@/assets/Me.png";
+import me2 from "@/assets/help.png";
+
 import "../../CustomCSS/PinNTape.css";
 const AboutMe: React.FC = () => {
+  const images = [me, me2];
+  const random_number = Math.floor(Math.random() * 2);
+  const picked_image = images[random_number];
+  console.log(random_number);
   return (
     <div className="homeBG flex flex-col items-center gap-10">
       <Header />
@@ -14,7 +20,7 @@ const AboutMe: React.FC = () => {
           <div className="img-tape img-tape--1--alt -top-[10%] left-[20%] z-2 -rotate-8" />
           <div className="relative h-auto w-full bg-white/90 p-2 shadow-xl">
             <Image
-              src={me.src}
+              src={picked_image.src}
               alt="Iwanmouse"
               width={300}
               height={300}
