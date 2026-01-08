@@ -1,194 +1,194 @@
 /*I did not make the scotch tape effect, I found it at https://codepen.io/binarykiwi/pen/BbOoPy */
 
 .img-tape {
-  position: relative;
-  margin-top: 10%;
-  pointer-events: none;
-  &:before,
-  &:after {
-    background: rgba(255, 255, 235, 0.3);
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-    content: "";
-    display: block;
-    height: 30px;
-    position: absolute;
-    width: 100px;
-  }
+    position: relative;
+    margin-top: 10%;
+    pointer-events: none;
+    &:before,
+    &:after {
+        background: rgba(255, 255, 235, 0.3);
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+        content: "";
+        display: block;
+        height: 30px;
+        position: absolute;
+        width: 100px;
+    }
 
-  img {
-    background: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-    height: auto;
-    padding: 8px;
-    vertical-align: top;
-  }
+    img {
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        height: auto;
+        padding: 8px;
+        vertical-align: top;
+    }
 }
 
 /* This is just for the bookmarks */
 .img-tape--1 {
-  &:before {
-    width: 220px;
-    height: 40px;
-  }
-  &:after {
-    display: none;
-  }
+    &:before {
+        width: 220px;
+        height: 40px;
+    }
+    &:after {
+        display: none;
+    }
 }
 
 .img-tape--1--alt {
-  position: absolute;
-  &:before {
-    width: 150px;
-    height: 50px;
-  }
+    position: absolute;
+    &:before {
+        width: 150px;
+        height: 50px;
+    }
 
-  &:after {
-    display: none;
-  }
+    &:after {
+        display: none;
+    }
 }
 
 .img-tape--2 {
-  &:before {
-    right: 80%;
-    top: 5%;
-    transform: rotate(-45deg);
-  }
+    &:before {
+        right: 80%;
+        top: 5%;
+        transform: rotate(-45deg);
+    }
 
-  &:after {
-    left: 80%;
-    top: 0%;
-    transform: rotate(45deg);
-  }
+    &:after {
+        left: 80%;
+        top: 0%;
+        transform: rotate(45deg);
+    }
 }
 
 .img-tape--2-alt {
-  &:before {
-    right: 90%;
-    transform: rotate(-45deg);
-  }
+    &:before {
+        right: 90%;
+        transform: rotate(-45deg);
+    }
 
-  &:after {
-    left: 90%;
-    transform: rotate(45deg);
-  }
+    &:after {
+        left: 90%;
+        transform: rotate(45deg);
+    }
 }
 .img-tape--2-altV2 {
-  &:before {
-    right: 90%;
-    transform: rotate(25deg);
-  }
+    &:before {
+        right: 90%;
+        transform: rotate(25deg);
+    }
 
-  &:after {
-    left: 90%;
-    transform: rotate(-50deg);
-  }
+    &:after {
+        left: 90%;
+        transform: rotate(-50deg);
+    }
 }
 
 .img-tape--3 {
-  &:before {
-    left: -8%;
-    top: 0%;
-    z-index: 1;
-    transform: rotate(-45deg);
-  }
+    &:before {
+        left: -8%;
+        top: 0%;
+        z-index: 1;
+        transform: rotate(-45deg);
+    }
 
-  &:after {
-    right: -8%;
-    bottom: 0%;
-    z-index: 1;
-    transform: rotate(-45deg);
-  }
+    &:after {
+        right: -8%;
+        bottom: 0%;
+        z-index: 1;
+        transform: rotate(-45deg);
+    }
 }
 
 .img-tape--4 {
-  &:before {
-    width: 60px;
-    height: 20px;
-    top: -10px;
-    right: 35%;
-  }
+    &:before {
+        width: 60px;
+        height: 20px;
+        top: -10px;
+        right: 35%;
+    }
 
-  &:after {
-    display: none;
-  }
+    &:after {
+        display: none;
+    }
 }
 
 .box-1 {
-  box-shadow: 4px 4px 0 0 rgba(229, 203, 186, 0.8);
-  background-color: #f6eee3;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.71' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-  position: relative;
+    box-shadow: 4px 4px 0 0 rgba(229, 203, 186, 0.8);
+    background-color: #f6eee3;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.71' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    position: relative;
 }
 
 /*Took this pin from https://codepen.io/dillonbrady/pen/EgRoZQ */
 .pin {
-  background-color: #aaa;
-  height: 32px;
-  width: 2px;
-  position: absolute;
-  left: 50%;
-  z-index: 1;
+    background-color: #aaa;
+    height: 32px;
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
 }
 
 .pin:after {
-  background-color: #a31;
-  background-image: radial-gradient(
-    25% 25%,
-    circle,
-    hsla(0, 0%, 100%, 0.3),
-    hsla(0, 0%, 0%, 0.3)
-  );
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 0 1px hsla(0, 0%, 0%, 0.1),
-    inset 3px 3px 3px hsla(0, 0%, 100%, 0.2),
-    inset -3px -3px 3px hsla(0, 0%, 0%, 0.2),
-    23px 20px 3px hsla(0, 0%, 0%, 0.15);
-  content: "";
-  height: 12px;
-  left: -5px;
-  position: absolute;
-  top: -10px;
-  width: 12px;
+    background-color: #a31;
+    background-image: radial-gradient(
+        25% 25%,
+        circle,
+        hsla(0, 0%, 100%, 0.3),
+        hsla(0, 0%, 0%, 0.3)
+    );
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 0 1px hsla(0, 0%, 0%, 0.1),
+        inset 3px 3px 3px hsla(0, 0%, 100%, 0.2),
+        inset -3px -3px 3px hsla(0, 0%, 0%, 0.2),
+        23px 20px 3px hsla(0, 0%, 0%, 0.15);
+    content: "";
+    height: 12px;
+    left: -5px;
+    position: absolute;
+    top: -10px;
+    width: 12px;
 }
 
 .pin:before {
-  background-color: hsla(0, 0%, 0%, 0.1);
-  box-shadow: 0 0 0.25em hsla(0, 0%, 0%, 0.1);
-  content: "";
+    background-color: hsla(0, 0%, 0%, 0.1);
+    box-shadow: 0 0 0.25em hsla(0, 0%, 0%, 0.1);
+    content: "";
 
-  height: 24px;
-  width: 2px;
-  left: 0;
-  position: absolute;
-  top: 8px;
+    height: 24px;
+    width: 2px;
+    left: 0;
+    position: absolute;
+    top: 8px;
 
-  transform: rotate(57.5deg);
-  -moz-transform: rotate(57.5deg);
-  -webkit-transform: rotate(57.5deg);
-  -o-transform: rotate(57.5deg);
-  -ms-transform: rotate(57.5deg);
+    transform: rotate(57.5deg);
+    -moz-transform: rotate(57.5deg);
+    -webkit-transform: rotate(57.5deg);
+    -o-transform: rotate(57.5deg);
+    -ms-transform: rotate(57.5deg);
 
-  transform-origin: 50% 100%;
-  -moz-transform-origin: 50% 100%;
-  -webkit-transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-  -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
 }
 
 .blokken {
-  position: relative;
-  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  font-size: 1rem;
-  background-image: linear-gradient(
-    to bottom,
-    #f6eee3 calc(1em - 1px),
-    #ccc calc(1em - 1px),
-    #ccc 1em,
-    #f6eee3 1em
-  );
-  background-position: 0% 1em;
-  background-size: 100% 1em;
-  background-repeat: repeat-y;
+    position: relative;
+    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    background-image: linear-gradient(
+        to bottom,
+        #f6eee3 calc(1em - 1px),
+        #ccc calc(1em - 1px),
+        #ccc 1em,
+        #f6eee3 1em
+    );
+    background-position: 0% 1em;
+    background-size: 100% 1em;
+    background-repeat: repeat-y;
 }
