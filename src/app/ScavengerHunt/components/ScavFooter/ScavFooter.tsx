@@ -9,8 +9,8 @@ import "../css/glass_background.css";
 
 const ScavFooter: React.FC = () => {
     return (
-        <footer className="absolute bottom-0 w-full border-t-1 border-black bg-[#1e262e] text-gray-900">
-            <div className="flex flex-col divide-gray-600 px-2 py-5 md:px-40 md:py-8 lg:flex-row lg:justify-between">
+        <footer className="fixed bottom-0 w-full border-t-1 border-black bg-[#1e262e] text-gray-900">
+            <div className="flex flex-col divide-gray-600 px-2 py-4 md:px-40 md:py-8 lg:flex-row lg:justify-between">
                 <div className="lg: flex flex-row items-center gap-3 self-center py-4 text-center font-[family-name:var(--font-montserrat)] font-semibold text-black md:flex-col md:space-y-0 md:space-x-4 lg:flex">
                     <p className="text-sm text-[#cbe3f5]">
                         Thank you to our Corporate Sponsor
