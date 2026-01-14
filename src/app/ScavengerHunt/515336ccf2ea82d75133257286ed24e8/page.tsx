@@ -31,9 +31,9 @@ const questions: Question[] = [
 ];
 export default function PageThree() {
     return (
-        <div className="flex h-full w-full flex-col bg-[#cbe3f5]">
+        <div className="flex min-h-screen min-w-screen flex-col bg-[#cbe3f5]">
             <ScavHeader />
-            <div className="pointer-events-none relative flex min-h-screen min-w-screen items-center justify-center">
+            <div className="pointer-events-none relative flex justify-center">
                 <ScavGameBox questions={questions} />
             </div>
 

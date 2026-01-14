@@ -48,7 +48,7 @@ export default function ScavGameBox({ questions }: Props) {
     return (
         <div>
             {!showLetter && (
-                <div className="mx-5 flex items-center justify-center">
+                <div className="mx-5 flex translate-y-50 items-center justify-center">
                     <div className="rounded-2xl bg-white p-4 font-[family-name:var(--font-montserrat)] shadow-lg lg:mt-50">
                         <h2 className="text-md mb-4 text-center font-semibold text-black">
                             {q.question}

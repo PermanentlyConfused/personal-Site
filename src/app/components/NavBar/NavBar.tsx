@@ -123,7 +123,9 @@ const NavBar: React.FC = () => {
                     height={200}
                     className="absolute top-20 opacity-80"
                 ></Image>
-                <div className="text-lg text-black lg:text-xl">Guest Book~</div>
+                <div className="text-lg text-black lg:text-xl">
+                    Recent Games
+                </div>
             </a>
         </div>
     );
