@@ -97,7 +97,7 @@ export default function ScavGameBox({ questions }: Props) {
                 <motion.div className="pointer-events-none flex min-h-screen flex-col gap-30">
                     <Confetti width={width} height={height} className="-z-2" />
 
-                    <div className="max-w-[45vw] translate-y-25 self-center rounded-xl border-2 border-black bg-white p-2">
+                    <div className="max-w-[60vw] translate-y-25 self-center rounded-xl border-2 border-black bg-white p-2">
                         <p className="text-black">
                             You have Found Letter <b>{q.number}</b>/5
                         </p>

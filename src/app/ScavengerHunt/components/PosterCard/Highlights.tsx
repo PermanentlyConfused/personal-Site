@@ -38,11 +38,12 @@ const PosterCards = () => {
         <div ref={containerRef} className="relative min-h-screen w-full">
             <div className="grid grid-cols-3 gap-4 p-4">
                 {stickers.map((card, index) => (
-                    <PosterCard
+                    <div
                         key={index}
-                        containerRef={containerRef}
-                        {...card}
-                    />
+                        className="flex aspect-square items-center justify-center"
+                    >
+                        <PosterCard containerRef={containerRef} {...card} />
+                    </div>
                 ))}
             </div>
         </div>
