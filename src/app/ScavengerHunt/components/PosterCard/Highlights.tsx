@@ -36,7 +36,7 @@ const PosterCards = () => {
 
     return (
         <div ref={containerRef} className="relative min-h-screen w-full">
-            <div className="grid grid-cols-3 gap-4 p-4">
+            <div className="grid grid-cols-3">
                 {stickers.map((card, index) => (
                     <div
                         key={index}
