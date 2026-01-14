@@ -4,8 +4,10 @@ import ScavHeader from "../components/ScavHeader/ScavHeader";
 import ScavFooter from "../components/ScavFooter/ScavFooter";
 import ScavGameBox from "../components/ScavGameBox/ScavGameBox";
 import { Question } from "../components/ScavGameBox/types/question";
+import Highlights from "../components/PosterCard/Highlights";
 
 import Image from "next/image";
+
 import Keona from "@/assets/ScavengerHunt/eboardPics/Keona.gif";
 import Matt from "@/assets/ScavengerHunt/eboardPics/Mat.gif";
 import Angela from "@/assets/ScavengerHunt/eboardPics/Angela.gif";
@@ -14,6 +16,9 @@ import Edina from "@/assets/ScavengerHunt/eboardPics/Edina.gif";
 import Min from "@/assets/ScavengerHunt/eboardPics/Min.gif";
 import Nate from "@/assets/ScavengerHunt/eboardPics/Nate.gif";
 import Saf from "@/assets/ScavengerHunt/eboardPics/Saf.gif";
+import Vic from "@/assets/ScavengerHunt/eboardPics/Vic.gif";
+import Pkin from "@/assets/ScavengerHunt/eboardPics/Pkin.gif";
+import Nikul from "@/assets/ScavengerHunt/eboardPics/Nikul.gif";
 
 const questions: Question[] = [
     {
@@ -26,7 +31,7 @@ const questions: Question[] = [
         ],
         correctIndex: 1,
         currentLetter: "",
-        letter: "n",
+        letter: "k",
         number: 2,
     },
 ];
@@ -34,65 +39,7 @@ export default function PageTwo() {
     return (
         <div className="flex h-full w-full flex-col bg-[#cbe3f5]">
             <ScavHeader />
-            <div className="-z-0 flex h-400 flex-col">
-                <Image
-                    src={Keona.src}
-                    alt="Keona"
-                    height={175}
-                    width={175}
-                    className="translate-y-[30%] self-end"
-                ></Image>
-                <Image
-                    src={Matt.src}
-                    alt="Matt"
-                    height={150}
-                    width={150}
-                    className="translate-y-[30%] self-start"
-                ></Image>
-                <Image
-                    src={Angela.src}
-                    alt="Angela"
-                    height={150}
-                    width={150}
-                    className="translate-y-[30%] self-end"
-                ></Image>
-                <Image
-                    src={Brad.src}
-                    alt="Brad"
-                    height={150}
-                    width={150}
-                    className="translate-y-[30%] self-start"
-                ></Image>
-                <Image
-                    src={Edina.src}
-                    alt="Edina"
-                    height={150}
-                    width={150}
-                    className="translate-y-[30%] self-end"
-                ></Image>
-                <Image
-                    src={Min.src}
-                    alt="Min"
-                    height={150}
-                    width={150}
-                    className="translate-y-[30%] self-start"
-                ></Image>
-                <Image
-                    src={Nate.src}
-                    alt="Nate"
-                    height={150}
-                    width={150}
-                    className="translate-y-[30%] self-end"
-                ></Image>
-                <Image
-                    src={Saf.src}
-                    alt="Saf"
-                    height={150}
-                    width={150}
-                    className="translate-y-[30%] self-start"
-                ></Image>
-            </div>
-            <div className="fixed -top-7 left-0 flex h-screen w-screen justify-center">
+            <div className="pointer-events-none relative flex min-h-screen min-w-screen items-center justify-center">
                 <ScavGameBox questions={questions} />
             </div>
 

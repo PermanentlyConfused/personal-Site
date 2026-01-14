@@ -3,6 +3,10 @@
 import { useState } from "react";
 import { Question } from "./types/question";
 import "../css/glass_background.css";
+import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
+import { motion } from "framer-motion";
+import Highlights from "../../components/PosterCard/Highlights";
 
 type Props = {
     questions: Question[];
@@ -40,13 +44,13 @@ export default function ScavGameBox({ questions }: Props) {
             }, 1000);
         }
     }
-
+    const { width, height } = useWindowSize();
     return (
         <div>
             {!showLetter && (
-                <div className="mx-4 flex min-h-screen items-center justify-center sm:p-8">
+                <div className="mx-5 flex items-center justify-center">
                     <div className="rounded-2xl bg-white p-4 font-[family-name:var(--font-montserrat)] shadow-lg lg:mt-50">
-                        <h2 className="mb-4 text-xl font-semibold text-balance text-black">
+                        <h2 className="text-md mb-4 text-center font-semibold text-black">
                             {q.question}
                         </h2>
                         <div className="grid gap-2">
@@ -55,13 +59,13 @@ export default function ScavGameBox({ questions }: Props) {
                                 const isSelected = index === selected;
 
                                 let styles =
-                                    "p-2 rounded-xl border border-slate-500 text-black text-left transition font-medium ";
+                                    "p-2 pointer-events-auto rounded-xl  border border-slate-500 text-black text-left transition font-medium ";
 
                                 if (selected !== null) {
                                     if (isCorrect && isSelected)
                                         styles += "bg-green-500";
                                     else if (isSelected) styles += "bg-red-500";
-                                    else styles += "bg-gray-100 opacity-60";
+                                    else styles += "bg-gray-100 opacity-60 ";
                                 } else {
                                     styles += "hover:bg-blue-100";
                                 }
@@ -90,14 +94,21 @@ export default function ScavGameBox({ questions }: Props) {
             )}
 
             {showLetter && (
-                <div className="flex h-screen flex-col items-center justify-center">
-                    <p className="rounded-xl border-2 bg-white p-2 text-black">
-                        You have Found Letter <b>{q.number}</b>/5
-                    </p>
-                    <div className="text-8xl font-bold text-blue-700">
-                        {q.letter}
+                <motion.div className="pointer-events-none flex min-h-screen flex-col gap-30">
+                    <Confetti width={width} height={height} className="-z-2" />
+
+                    <div className="max-w-[45vw] translate-y-25 self-center rounded-xl border-2 border-black bg-white p-2">
+                        <p className="text-black">
+                            You have Found Letter <b>{q.number}</b>/5
+                        </p>
+                        <div className="pb-4 text-center text-6xl font-bold text-blue-700">
+                            {q.letter}
+                        </div>
                     </div>
-                </div>
+                    <div className="pointer-events-auto min-h-screen">
+                        <Highlights />
+                    </div>
+                </motion.div>
             )}
         </div>
     );
