@@ -17,12 +17,9 @@ const questions: Question[] = [
 ];
 export default function PageOne() {
     return (
-        <div className="flex h-full w-full flex-col bg-[#cbe3f5]">
+        <div className="flex min-h-screen min-w-screen flex-col justify-center bg-[#cbe3f5]">
             <ScavHeader />
-            {/* <div className="no-scrollbar -z-0 flex min-h-screen w-full flex-col gap-y-80"></div>
-             */}
-
-            <div className="pointer-events-none relative flex min-h-screen min-w-screen items-center justify-center">
+            <div className="pointer-events-none relative flex justify-center">
                 <ScavGameBox questions={questions} />
             </div>
 

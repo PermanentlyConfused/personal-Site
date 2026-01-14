@@ -71,7 +71,7 @@ const PosterCard = ({ containerRef, src, alt }: CardProps) => {
         <motion.img
             onMouseDown={updateZIndex}
             style={{ zIndex }}
-            className="drag-elements w-full p-1 pb-4 select-none"
+            className="drag-elements h-full p-1 pb-4 select-none"
             src={src.src}
             alt={alt}
             drag
